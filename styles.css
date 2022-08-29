@@ -59,7 +59,8 @@ header{
 }
 
 .nav-link-mylogo{
-    width: 1.6rem;
-    height: 4.4rem;
-    background: #fff;
+    width: 4rem;
+    height: 4rem;
+    background: url("images/RG.png") center no-repeat;
+    background-size: auto;
 } 
