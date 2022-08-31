@@ -1,4 +1,9 @@
 /*CSS*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500,500italic,400italic,300italic,100italic,700italic);
+/* @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@import url(https://use.fontawesome.com/releases/v5.11.2/css/all.css);
+@import url(https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css); */
+
 *,
 *::before,
 *::after{
@@ -7,12 +12,12 @@
 }
 
 
-html{
-    font-size: 10;
-    font-family: 'SF Pro Display', sans-serif;
+html {
+    box-sizing: border-box
 }
 
 a{
+    font-family: Roboto, sans-serif;
     display: block;
     text-decoration: none;
 }
@@ -20,7 +25,7 @@ a{
 .container{
     max-width: 98rem;
     margin: 0 auto;
-    padding: 2.2rem;
+    padding: 1.5rem;
 }
 
 header{
@@ -31,7 +36,69 @@ header{
     height: 6rem;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(2rem);
+}
 
+body {
+    color: #333;
+    font-family: Roboto, sans-serif;
+    font-feature-settings: "kern", "liga", "pnum";
+    font-size: 1rem;
+    line-height: 1.5
+}
+
+@media print {
+    body {
+        font-size: 0.9rem
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.1rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: dashed 2px #CCCCCC;
+    padding-bottom: 10px;
+    margin-bottom: 40px
+}
+
+@media print {
+    h3 {
+        margin-bottom: 20px
+    }
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 3px
+}
+
+.about{
+    padding: 7rem;
+}
+
+.header-right {
+    text-align: right;
 }
 
 .nav-list{
@@ -48,7 +115,8 @@ header{
 }
 
 .nav-link{
-    font-size: 1.2rem;
+    font-family: Roboto, sans-serif;
+    font-size: 1.5rem;
     color: #fff;
     padding: 0 1rem;
     transition: opacity .2s;
@@ -60,7 +128,10 @@ header{
 
 .nav-link-mylogo{
     width: 4rem;
-    height: 4rem;
-    background: url("images/RG.png") center no-repeat;
-    background-size: auto;
+    height: 2.5rem;
+    background-image: url("images/RG.png");
+    background-position: center;
+    /*background: url("images/RG.png") center no-repeat;*/
+    background-size: 60px;
+    background-repeat: no-repeat;
 } 
