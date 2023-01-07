@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html><head>
+<!--
+	 Global site tag (gtag.js) - Google Analytics 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141762792-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141762792-1');
+</script>
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lior Yariv's Homepage</title>
+<link href="main_landing/css/aboutPageStyle.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+</style>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+</head>
+
+<body alink="#282727" vlink="#9b9b9b" link="#9b9b9b">
+<!-- Header content -->
+<header>
+  <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="main_landing//images/profile.jpg" alt="sample" width="259"> </div>
+<!--	<img src="AboutPageAssets/images/fonitAigolkatan.jpg" alt="sample" width="259"> </div>-->
+  <!-- Identity details -->
+  <section class="profileHeader">
+    <h1>Lior Yariv</h1>
+    <h3>Robotics Engineer</h3>
+    <hr>
+    <p align="justify"> 
+      Hi, my name is Rohan. I am a soon to be graduate with a Master of Science in Mechatronics and Robotics. (May 2023). 
+      I am looking to make an impact in the USA with a career in Robotics and Automation.
+      <br>
+    My experience includes many years of C++, Python and Matlab programming. Circuit and PCB design have been a core focus of my projects and work experience as well. 
+    My mechanical design experience encompasses rapid prototyping and the use of many CAD software packages (Solidworks, AutoCAD, Fusion 360). 
+    I have a strong background in sensor fusion and machine vision applications. I also excel with machine learning frameworks and algorithms, such as Tensorflow and PyTorch.
+    <br>
+    As for my future, I hope to work in a multidisciplinary team and meaningfully contribute to the rapidly growing home and industrial automation industries. Designing and developing robots to perform complex tasks for us and ease the burden on humans.
+	<br>
+    </p>
+  </section>
+  <!-- Links to Social network accounts -->
+  <aside class="socialNetworkNavBar">
+	   <div class="socialNetworkNav"> 
+      <!-- Add a Anchor tag with nested img tag here --> 
+		   <a href="mailto:rohang9929@gmail.com">
+      <img src="AboutPageAssets/images/mail.png" alt="sample" width="30"></a> </div>
+      <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://github.com/RohanG9929" target="_blank">
+      <img src="AboutPageAssets/images/github.png" alt="sample" width="30"></a>  </div>
+    <div class="socialNetworkNav"> 
+		<a href="https://scholar.google.com/citations?user=H1WDcG4AAAAJ&amp;hl=en&#10;" target="_blank">
+      <!-- Add a Anchor tag with nested img tag here --> 
+      <img src="AboutPageAssets/images/scholar.jpg" alt="sample" width="30"></a>  </div>
+	  	  <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://twitter.com/YarivLior" target="_blank">
+      <img src="AboutPageAssets/images/twitt.png" alt="sample" width="30"></a>  </div>
+<!--
+	  <div class="socialNetworkNav">
+		 <a href="https://www.linkedin.com/in/lior-yariv-3a01a690/" target="_blank">
+			 <img src="AboutPageAssets/images/linkedin.png"  alt="sample" width="30"> </a></div>
+-->
+	  
+  </aside>
+</header>
+<!-- content -->
+<section class="mainContent"> 
+  <!-- Contact details -->
+  
+  <!-- Previous experience details -->
+  
+  <section class="section2">
+  <h2 class="sectionTitle">Publications</h2>
+    <hr class="sectionTitleRule">
+
+    <hr class="sectionTitleRule2">
+	  
+    	<!-- VolSDF  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/volsdf_2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/volsdf.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Volume Rendering of Neural Implicit Surfaces </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="https://jiataogu.me/" target="_blank">Jiatao Gu</a>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2021, <b style="color:darksalmon">Oral</b>  
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		
+		  <div class="dropdown"><span></span><a href="https://lioryariv.github.io/volsdf/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;"> Neural volume rendering became increasingly popular recently due to its success in synthesizing novel views of a scene from a sparse set of input images. So far, the geometry learned by neural volume rendering techniques was modeled using a generic density function. Furthermore, the geometry itself was extracted using an arbitrary level set of the density function leading to a noisy, often low fidelity reconstruction. The goal of this paper is to improve geometry representation and reconstruction in neural volume rendering. We achieve that by modeling the volume density as a function of the geometry. This is in contrast to previous work modeling the geometry as a function of the volume density. In more detail, we define the volume density function as Laplace’s cumulative distribution function (CDF) applied to a signed distance function (SDF) representation. This simple density representation has three benefits: (i) it provides a useful inductive bias to the geometry learned in the neural volume rendering process; (ii) it facilitates a bound on the opacity approximation error, leading to an accurate sampling of the viewing ray. Accurate sampling is important to provide a precise coupling of geometry and radiance; and (iii) it allows efficient unsupervised disentanglement of shape and appearance in volume rendering. Applying this new density representation to challenging scene multiview datasets produced high quality geometry reconstructions, outperforming relevant baselines. Furthermore, switching shape and appearance between scenes is possible due to the disentanglement of the two.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2106.12052" target="_blank">Paper</a></div>
+		  <div class="dropdown"><span></span><a href="https://github.com/lioryariv/volsdf" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IDR  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/scull2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/idr.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, Dror Moran, <a href="https://www.weizmann.ac.il/math/meirav/" target="_blank">Meirav Galun</a>,  <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.weizmann.ac.il/math/ronen/home/" target="_blank">Ronen Basri</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2020, <b style="color:darksalmon">Spotlight</b> 
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+			
+			<div class="dropdown"><span></span><a href="https://lioryariv.github.io/idr/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">In this work we address the challenging problem of multiview 3D surface reconstruction. We introduce a neural network architecture that simultaneously learns the unknown geometry, camera parameters, and a neural renderer that approximates the light reflected from the surface towards the camera. The geometry is represented as a zero level-set of a neural network, while the neural renderer, derived from the rendering equation, is capable of (implicitly) modeling a wide set of lighting conditions and materials. We trained our network on real world 2D images of objects with different material properties, lighting conditions, and noisy camera initializations from the DTU MVS dataset. We found our model to produce state of the art 3D surface reconstructions with high fidelity, resolution and detail.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2003.09852" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/lioryariv/idr" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IGR  -->
+	  	<div class="sectionContent"><br>
+	 		<img src="AboutPageAssets/images/igr.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Implicit Geometric Regularization for Learning Shapes </h2>
+      		<h3 class="sectionContentSubTitle"> Amos Gropp, <b>Lior Yariv</b>, Niv Haim, <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>International Conference on Machine Learning (ICML) 2020
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">Representing shapes as level sets of neural networks has been recently proved to be useful for different shape analysis and reconstruction tasks. So far, such representations were computed using either: (i) pre-computed implicit shape representations; or (ii) loss functions explicitly defined over the neural level sets. In this paper we offer a new paradigm for computing high fidelity implicit neural representations directly from raw data (ie, point clouds, with or without normal information). We observe that a rather simple loss function, encouraging the neural network to vanish on the input point cloud and to have a unit norm gradient, possesses an implicit geometric regularization property that favors smooth and natural zero level set surfaces, avoiding bad zero-loss solutions. We provide a theoretical analysis of this property for the linear case, and show that, in practice, our method leads to state of the art implicit neural representations with higher level-of-details and fidelity compared to previous methods.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2002.10099" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/amosgropp/IGR" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  	  <!-- Controlling  -->
+	  	<div class="sectionContent">
+	 		<img src="AboutPageAssets/images/2019_neural_levelsets.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Controlling Neural Level Sets </h2>
+      		<h3 class="sectionContentSubTitle"> <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, Niv Haim, <b>Lior Yariv</b>, Ofer Israelov, <a href="https://haggaim.github.io/" target="_blank">Haggai Maron</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2019
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">The level sets of neural networks represent fundamental properties such as decision boundaries of classifiers and are used to model non-linear manifold data such as curves and surfaces. Thus, methods for controlling the neural level sets could find many applications in machine learning. In this paper we present a simple and scalable approach to directly control level sets of a deep neural network. Our method consists of two parts: (i) sampling of the neural level sets, and (ii) relating the samples’ positions to the network parameters. The latter is achieved by a sample network that is constructed by adding a single fixed linear layer to the original network. In turn, the sample network can be used to incorporate the level set samples into a loss function of interest. We have tested our method on three different learning tasks:  raining networks robust to adversarial attacks, improving generalization to unseen data, and curve and surface reconstruction from point clouds. Notably, we increase robust accuracy to the level of standard classification accuracy in off-the-shelf networks, improving it by 2% in MNIST and 27% in CIFAR10 compared to state-of-the-art methods. For surface reconstruction, we produce high fidelity surfaces directly from raw 3D point clouds.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/1905.11911" target="_blank">Paper</a></div>
+			<div class="dropdown"><span></span><a href="https://github.com/matanatz/ControllingNeuralLevelsets" target="_blank">Code</a></div>
+	  </aside>
+    <br><br>
+	
+<!-- Replicate the above Div block to add more title and company details --> 
+	</section>
+
+	  
+  <hr>
+  
+</section>
+<footer>
+  <p class="footerDisclaimer">Made with Dreamweaver <span></span></p>
+  <p class="footerNote"></p>
+</footer>
+
+
+</body></html>
+<head>
+<!--
+	 Global site tag (gtag.js) - Google Analytics 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141762792-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141762792-1');
+</script>
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lior Yariv's Homepage</title>
+<link href="AboutPageAssets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+</style>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+</head>
+<body alink="#282727" vlink="#9b9b9b" link="#9b9b9b">
+<!-- Header content -->
+<header>
+  <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="AboutPageAssets/images/profile_pic.jpg" alt="sample" width="259"> </div>
+<!--	<img src="AboutPageAssets/images/fonitAigolkatan.jpg" alt="sample" width="259"> </div>-->
+  <!-- Identity details -->
+  <section class="profileHeader">
+    <h1>Lior Yariv</h1>
+    <h3>PhD Candidate</h3>
+    <hr>
+    <p>I am a PhD student in the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">
+      Prof. Yaron Lipman</a>. <br> My main research interest is in devising deep learning methods for various 3D shapes analysis and synthesis tasks.
+	<br>
+    </p>
+  </section>
+  <!-- Links to Social network accounts -->
+  <aside class="socialNetworkNavBar">
+	   <div class="socialNetworkNav"> 
+      <!-- Add a Anchor tag with nested img tag here --> 
+		   <a href="mailto:lior.yariv@weizmann.ac.il">
+      <img src="AboutPageAssets/images/mail.png" alt="sample" width="30"></a> </div>
+      <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://github.com/lioryariv" target="_blank">
+      <img src="AboutPageAssets/images/github.png" alt="sample" width="30"></a>  </div>
+    <div class="socialNetworkNav"> 
+		<a href="https://scholar.google.com/citations?user=H1WDcG4AAAAJ&amp;hl=en&#10;" target="_blank">
+      <!-- Add a Anchor tag with nested img tag here --> 
+      <img src="AboutPageAssets/images/scholar.jpg" alt="sample" width="30"></a>  </div>
+	  	  <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://twitter.com/YarivLior" target="_blank">
+      <img src="AboutPageAssets/images/twitt.png" alt="sample" width="30"></a>  </div>
+<!--
+	  <div class="socialNetworkNav">
+		 <a href="https://www.linkedin.com/in/lior-yariv-3a01a690/" target="_blank">
+			 <img src="AboutPageAssets/images/linkedin.png"  alt="sample" width="30"> </a></div>
+-->
+	  
+  </aside>
+</header>
+<!-- content -->
+<section class="mainContent"> 
+  <!-- Contact details -->
+  
+  <!-- Previous experience details -->
+  
+  <section class="section2">
+  <h2 class="sectionTitle">Publications</h2>
+    <hr class="sectionTitleRule">
+
+    <hr class="sectionTitleRule2">
+	  
+    	<!-- VolSDF  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/volsdf_2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/volsdf.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Volume Rendering of Neural Implicit Surfaces </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="https://jiataogu.me/" target="_blank">Jiatao Gu</a>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2021, <b style="color:darksalmon">Oral</b>  
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		
+		  <div class="dropdown"><span></span><a href="https://lioryariv.github.io/volsdf/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;"> Neural volume rendering became increasingly popular recently due to its success in synthesizing novel views of a scene from a sparse set of input images. So far, the geometry learned by neural volume rendering techniques was modeled using a generic density function. Furthermore, the geometry itself was extracted using an arbitrary level set of the density function leading to a noisy, often low fidelity reconstruction. The goal of this paper is to improve geometry representation and reconstruction in neural volume rendering. We achieve that by modeling the volume density as a function of the geometry. This is in contrast to previous work modeling the geometry as a function of the volume density. In more detail, we define the volume density function as Laplace’s cumulative distribution function (CDF) applied to a signed distance function (SDF) representation. This simple density representation has three benefits: (i) it provides a useful inductive bias to the geometry learned in the neural volume rendering process; (ii) it facilitates a bound on the opacity approximation error, leading to an accurate sampling of the viewing ray. Accurate sampling is important to provide a precise coupling of geometry and radiance; and (iii) it allows efficient unsupervised disentanglement of shape and appearance in volume rendering. Applying this new density representation to challenging scene multiview datasets produced high quality geometry reconstructions, outperforming relevant baselines. Furthermore, switching shape and appearance between scenes is possible due to the disentanglement of the two.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2106.12052" target="_blank">Paper</a></div>
+		  <div class="dropdown"><span></span><a href="https://github.com/lioryariv/volsdf" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IDR  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/scull2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/idr.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, Dror Moran, <a href="https://www.weizmann.ac.il/math/meirav/" target="_blank">Meirav Galun</a>,  <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.weizmann.ac.il/math/ronen/home/" target="_blank">Ronen Basri</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2020, <b style="color:darksalmon">Spotlight</b> 
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+			
+			<div class="dropdown"><span></span><a href="https://lioryariv.github.io/idr/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">In this work we address the challenging problem of multiview 3D surface reconstruction. We introduce a neural network architecture that simultaneously learns the unknown geometry, camera parameters, and a neural renderer that approximates the light reflected from the surface towards the camera. The geometry is represented as a zero level-set of a neural network, while the neural renderer, derived from the rendering equation, is capable of (implicitly) modeling a wide set of lighting conditions and materials. We trained our network on real world 2D images of objects with different material properties, lighting conditions, and noisy camera initializations from the DTU MVS dataset. We found our model to produce state of the art 3D surface reconstructions with high fidelity, resolution and detail.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2003.09852" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/lioryariv/idr" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IGR  -->
+	  	<div class="sectionContent"><br>
+	 		<img src="AboutPageAssets/images/igr.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Implicit Geometric Regularization for Learning Shapes </h2>
+      		<h3 class="sectionContentSubTitle"> Amos Gropp, <b>Lior Yariv</b>, Niv Haim, <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>International Conference on Machine Learning (ICML) 2020
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">Representing shapes as level sets of neural networks has been recently proved to be useful for different shape analysis and reconstruction tasks. So far, such representations were computed using either: (i) pre-computed implicit shape representations; or (ii) loss functions explicitly defined over the neural level sets. In this paper we offer a new paradigm for computing high fidelity implicit neural representations directly from raw data (ie, point clouds, with or without normal information). We observe that a rather simple loss function, encouraging the neural network to vanish on the input point cloud and to have a unit norm gradient, possesses an implicit geometric regularization property that favors smooth and natural zero level set surfaces, avoiding bad zero-loss solutions. We provide a theoretical analysis of this property for the linear case, and show that, in practice, our method leads to state of the art implicit neural representations with higher level-of-details and fidelity compared to previous methods.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2002.10099" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/amosgropp/IGR" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  	  <!-- Controlling  -->
+	  	<div class="sectionContent">
+	 		<img src="AboutPageAssets/images/2019_neural_levelsets.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Controlling Neural Level Sets </h2>
+      		<h3 class="sectionContentSubTitle"> <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, Niv Haim, <b>Lior Yariv</b>, Ofer Israelov, <a href="https://haggaim.github.io/" target="_blank">Haggai Maron</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2019
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">The level sets of neural networks represent fundamental properties such as decision boundaries of classifiers and are used to model non-linear manifold data such as curves and surfaces. Thus, methods for controlling the neural level sets could find many applications in machine learning. In this paper we present a simple and scalable approach to directly control level sets of a deep neural network. Our method consists of two parts: (i) sampling of the neural level sets, and (ii) relating the samples’ positions to the network parameters. The latter is achieved by a sample network that is constructed by adding a single fixed linear layer to the original network. In turn, the sample network can be used to incorporate the level set samples into a loss function of interest. We have tested our method on three different learning tasks:  raining networks robust to adversarial attacks, improving generalization to unseen data, and curve and surface reconstruction from point clouds. Notably, we increase robust accuracy to the level of standard classification accuracy in off-the-shelf networks, improving it by 2% in MNIST and 27% in CIFAR10 compared to state-of-the-art methods. For surface reconstruction, we produce high fidelity surfaces directly from raw 3D point clouds.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/1905.11911" target="_blank">Paper</a></div>
+			<div class="dropdown"><span></span><a href="https://github.com/matanatz/ControllingNeuralLevelsets" target="_blank">Code</a></div>
+	  </aside>
+    <br><br>
+	
+<!-- Replicate the above Div block to add more title and company details --> 
+	</section>
+
+	  
+  <hr>
+  
+</section>
+<footer>
+  <p class="footerDisclaimer">Made with Dreamweaver <span></span></p>
+  <p class="footerNote"></p>
+</footer>
+
+
+</body>
+<!-- Header content -->
+<header>
+  <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="AboutPageAssets/images/profile_pic.jpg" alt="sample" width="259"> </div>
+<!--	<img src="AboutPageAssets/images/fonitAigolkatan.jpg" alt="sample" width="259"> </div>-->
+  <!-- Identity details -->
+  <section class="profileHeader">
+    <h1>Lior Yariv</h1>
+    <h3>PhD Candidate</h3>
+    <hr>
+    <p>I am a PhD student in the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">
+      Prof. Yaron Lipman</a>. <br> My main research interest is in devising deep learning methods for various 3D shapes analysis and synthesis tasks.
+	<br>
+    </p>
+  </section>
+  <!-- Links to Social network accounts -->
+  <aside class="socialNetworkNavBar">
+	   <div class="socialNetworkNav"> 
+      <!-- Add a Anchor tag with nested img tag here --> 
+		   <a href="mailto:lior.yariv@weizmann.ac.il">
+      <img src="AboutPageAssets/images/mail.png" alt="sample" width="30"></a> </div>
+      <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://github.com/lioryariv" target="_blank">
+      <img src="AboutPageAssets/images/github.png" alt="sample" width="30"></a>  </div>
+    <div class="socialNetworkNav"> 
+		<a href="https://scholar.google.com/citations?user=H1WDcG4AAAAJ&amp;hl=en&#10;" target="_blank">
+      <!-- Add a Anchor tag with nested img tag here --> 
+      <img src="AboutPageAssets/images/scholar.jpg" alt="sample" width="30"></a>  </div>
+	  	  <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://twitter.com/YarivLior" target="_blank">
+      <img src="AboutPageAssets/images/twitt.png" alt="sample" width="30"></a>  </div>
+<!--
+	  <div class="socialNetworkNav">
+		 <a href="https://www.linkedin.com/in/lior-yariv-3a01a690/" target="_blank">
+			 <img src="AboutPageAssets/images/linkedin.png"  alt="sample" width="30"> </a></div>
+-->
+	  
+  </aside>
+</header>
+<div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="AboutPageAssets/images/profile_pic.jpg" alt="sample" width="259"> </div>
+<!--	<img src="AboutPageAssets/images/fonitAigolkatan.jpg" alt="sample" width="259"> </div>-->
+<!-- Identity details -->
+<section class="profileHeader">
+    <h1>Lior Yariv</h1>
+    <h3>PhD Candidate</h3>
+    <hr>
+    <p>I am a PhD student in the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">
+      Prof. Yaron Lipman</a>. <br> My main research interest is in devising deep learning methods for various 3D shapes analysis and synthesis tasks.
+	<br>
+    </p>
+  </section>
+<h1>Lior Yariv</h1>
+<h3>PhD Candidate</h3>
+<hr>
+<p>I am a PhD student in the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">
+      Prof. Yaron Lipman</a>. <br> My main research interest is in devising deep learning methods for various 3D shapes analysis and synthesis tasks.
+	<br>
+    </p>
+<section class="profileHeader">
+    <h1>Lior Yariv</h1>
+    <h3>PhD Candidate</h3>
+    <hr>
+    <p>I am a PhD student in the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">
+      Prof. Yaron Lipman</a>. <br> My main research interest is in devising deep learning methods for various 3D shapes analysis and synthesis tasks.
+	<br>
+    </p>
+  </section>
+<!-- Links to Social network accounts -->
+<aside class="socialNetworkNavBar">
+	   <div class="socialNetworkNav"> 
+      <!-- Add a Anchor tag with nested img tag here --> 
+		   <a href="mailto:lior.yariv@weizmann.ac.il">
+      <img src="AboutPageAssets/images/mail.png" alt="sample" width="30"></a> </div>
+      <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://github.com/lioryariv" target="_blank">
+      <img src="AboutPageAssets/images/github.png" alt="sample" width="30"></a>  </div>
+    <div class="socialNetworkNav"> 
+		<a href="https://scholar.google.com/citations?user=H1WDcG4AAAAJ&amp;hl=en&#10;" target="_blank">
+      <!-- Add a Anchor tag with nested img tag here --> 
+      <img src="AboutPageAssets/images/scholar.jpg" alt="sample" width="30"></a>  </div>
+	  	  <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://twitter.com/YarivLior" target="_blank">
+      <img src="AboutPageAssets/images/twitt.png" alt="sample" width="30"></a>  </div>
+<!--
+	  <div class="socialNetworkNav">
+		 <a href="https://www.linkedin.com/in/lior-yariv-3a01a690/" target="_blank">
+			 <img src="AboutPageAssets/images/linkedin.png"  alt="sample" width="30"> </a></div>
+-->
+	  
+  </aside>
+<header>
+  <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="AboutPageAssets/images/profile_pic.jpg" alt="sample" width="259"> </div>
+<!--	<img src="AboutPageAssets/images/fonitAigolkatan.jpg" alt="sample" width="259"> </div>-->
+  <!-- Identity details -->
+  <section class="profileHeader">
+    <h1>Lior Yariv</h1>
+    <h3>PhD Candidate</h3>
+    <hr>
+    <p>I am a PhD student in the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">
+      Prof. Yaron Lipman</a>. <br> My main research interest is in devising deep learning methods for various 3D shapes analysis and synthesis tasks.
+	<br>
+    </p>
+  </section>
+  <!-- Links to Social network accounts -->
+  <aside class="socialNetworkNavBar">
+	   <div class="socialNetworkNav"> 
+      <!-- Add a Anchor tag with nested img tag here --> 
+		   <a href="mailto:lior.yariv@weizmann.ac.il">
+      <img src="AboutPageAssets/images/mail.png" alt="sample" width="30"></a> </div>
+      <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://github.com/lioryariv" target="_blank">
+      <img src="AboutPageAssets/images/github.png" alt="sample" width="30"></a>  </div>
+    <div class="socialNetworkNav"> 
+		<a href="https://scholar.google.com/citations?user=H1WDcG4AAAAJ&amp;hl=en&#10;" target="_blank">
+      <!-- Add a Anchor tag with nested img tag here --> 
+      <img src="AboutPageAssets/images/scholar.jpg" alt="sample" width="30"></a>  </div>
+	  	  <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://twitter.com/YarivLior" target="_blank">
+      <img src="AboutPageAssets/images/twitt.png" alt="sample" width="30"></a>  </div>
+<!--
+	  <div class="socialNetworkNav">
+		 <a href="https://www.linkedin.com/in/lior-yariv-3a01a690/" target="_blank">
+			 <img src="AboutPageAssets/images/linkedin.png"  alt="sample" width="30"> </a></div>
+-->
+	  
+  </aside>
+</header>
+<!-- content -->
+<section class="mainContent"> 
+  <!-- Contact details -->
+  
+  <!-- Previous experience details -->
+  
+  <section class="section2">
+  <h2 class="sectionTitle">Publications</h2>
+    <hr class="sectionTitleRule">
+
+    <hr class="sectionTitleRule2">
+	  
+    	<!-- VolSDF  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/volsdf_2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/volsdf.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Volume Rendering of Neural Implicit Surfaces </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="https://jiataogu.me/" target="_blank">Jiatao Gu</a>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2021, <b style="color:darksalmon">Oral</b>  
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		
+		  <div class="dropdown"><span></span><a href="https://lioryariv.github.io/volsdf/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;"> Neural volume rendering became increasingly popular recently due to its success in synthesizing novel views of a scene from a sparse set of input images. So far, the geometry learned by neural volume rendering techniques was modeled using a generic density function. Furthermore, the geometry itself was extracted using an arbitrary level set of the density function leading to a noisy, often low fidelity reconstruction. The goal of this paper is to improve geometry representation and reconstruction in neural volume rendering. We achieve that by modeling the volume density as a function of the geometry. This is in contrast to previous work modeling the geometry as a function of the volume density. In more detail, we define the volume density function as Laplace’s cumulative distribution function (CDF) applied to a signed distance function (SDF) representation. This simple density representation has three benefits: (i) it provides a useful inductive bias to the geometry learned in the neural volume rendering process; (ii) it facilitates a bound on the opacity approximation error, leading to an accurate sampling of the viewing ray. Accurate sampling is important to provide a precise coupling of geometry and radiance; and (iii) it allows efficient unsupervised disentanglement of shape and appearance in volume rendering. Applying this new density representation to challenging scene multiview datasets produced high quality geometry reconstructions, outperforming relevant baselines. Furthermore, switching shape and appearance between scenes is possible due to the disentanglement of the two.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2106.12052" target="_blank">Paper</a></div>
+		  <div class="dropdown"><span></span><a href="https://github.com/lioryariv/volsdf" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IDR  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/scull2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/idr.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, Dror Moran, <a href="https://www.weizmann.ac.il/math/meirav/" target="_blank">Meirav Galun</a>,  <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.weizmann.ac.il/math/ronen/home/" target="_blank">Ronen Basri</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2020, <b style="color:darksalmon">Spotlight</b> 
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+			
+			<div class="dropdown"><span></span><a href="https://lioryariv.github.io/idr/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">In this work we address the challenging problem of multiview 3D surface reconstruction. We introduce a neural network architecture that simultaneously learns the unknown geometry, camera parameters, and a neural renderer that approximates the light reflected from the surface towards the camera. The geometry is represented as a zero level-set of a neural network, while the neural renderer, derived from the rendering equation, is capable of (implicitly) modeling a wide set of lighting conditions and materials. We trained our network on real world 2D images of objects with different material properties, lighting conditions, and noisy camera initializations from the DTU MVS dataset. We found our model to produce state of the art 3D surface reconstructions with high fidelity, resolution and detail.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2003.09852" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/lioryariv/idr" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IGR  -->
+	  	<div class="sectionContent"><br>
+	 		<img src="AboutPageAssets/images/igr.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Implicit Geometric Regularization for Learning Shapes </h2>
+      		<h3 class="sectionContentSubTitle"> Amos Gropp, <b>Lior Yariv</b>, Niv Haim, <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>International Conference on Machine Learning (ICML) 2020
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">Representing shapes as level sets of neural networks has been recently proved to be useful for different shape analysis and reconstruction tasks. So far, such representations were computed using either: (i) pre-computed implicit shape representations; or (ii) loss functions explicitly defined over the neural level sets. In this paper we offer a new paradigm for computing high fidelity implicit neural representations directly from raw data (ie, point clouds, with or without normal information). We observe that a rather simple loss function, encouraging the neural network to vanish on the input point cloud and to have a unit norm gradient, possesses an implicit geometric regularization property that favors smooth and natural zero level set surfaces, avoiding bad zero-loss solutions. We provide a theoretical analysis of this property for the linear case, and show that, in practice, our method leads to state of the art implicit neural representations with higher level-of-details and fidelity compared to previous methods.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2002.10099" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/amosgropp/IGR" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  	  <!-- Controlling  -->
+	  	<div class="sectionContent">
+	 		<img src="AboutPageAssets/images/2019_neural_levelsets.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Controlling Neural Level Sets </h2>
+      		<h3 class="sectionContentSubTitle"> <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, Niv Haim, <b>Lior Yariv</b>, Ofer Israelov, <a href="https://haggaim.github.io/" target="_blank">Haggai Maron</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2019
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">The level sets of neural networks represent fundamental properties such as decision boundaries of classifiers and are used to model non-linear manifold data such as curves and surfaces. Thus, methods for controlling the neural level sets could find many applications in machine learning. In this paper we present a simple and scalable approach to directly control level sets of a deep neural network. Our method consists of two parts: (i) sampling of the neural level sets, and (ii) relating the samples’ positions to the network parameters. The latter is achieved by a sample network that is constructed by adding a single fixed linear layer to the original network. In turn, the sample network can be used to incorporate the level set samples into a loss function of interest. We have tested our method on three different learning tasks:  raining networks robust to adversarial attacks, improving generalization to unseen data, and curve and surface reconstruction from point clouds. Notably, we increase robust accuracy to the level of standard classification accuracy in off-the-shelf networks, improving it by 2% in MNIST and 27% in CIFAR10 compared to state-of-the-art methods. For surface reconstruction, we produce high fidelity surfaces directly from raw 3D point clouds.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/1905.11911" target="_blank">Paper</a></div>
+			<div class="dropdown"><span></span><a href="https://github.com/matanatz/ControllingNeuralLevelsets" target="_blank">Code</a></div>
+	  </aside>
+    <br><br>
+	
+<!-- Replicate the above Div block to add more title and company details --> 
+	</section>
+
+	  
+  <hr>
+  
+</section>
+<footer>
+  <p class="footerDisclaimer">Made with Dreamweaver <span></span></p>
+  <p class="footerNote"></p>
+</footer>
+<body alink="#282727" vlink="#9b9b9b" link="#9b9b9b">
+<!-- Header content -->
+<header>
+  <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="AboutPageAssets/images/profile_pic.jpg" alt="sample" width="259"> </div>
+<!--	<img src="AboutPageAssets/images/fonitAigolkatan.jpg" alt="sample" width="259"> </div>-->
+  <!-- Identity details -->
+  <section class="profileHeader">
+    <h1>Lior Yariv</h1>
+    <h3>PhD Candidate</h3>
+    <hr>
+    <p>I am a PhD student in the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">
+      Prof. Yaron Lipman</a>. <br> My main research interest is in devising deep learning methods for various 3D shapes analysis and synthesis tasks.
+	<br>
+    </p>
+  </section>
+  <!-- Links to Social network accounts -->
+  <aside class="socialNetworkNavBar">
+	   <div class="socialNetworkNav"> 
+      <!-- Add a Anchor tag with nested img tag here --> 
+		   <a href="mailto:lior.yariv@weizmann.ac.il">
+      <img src="AboutPageAssets/images/mail.png" alt="sample" width="30"></a> </div>
+      <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://github.com/lioryariv" target="_blank">
+      <img src="AboutPageAssets/images/github.png" alt="sample" width="30"></a>  </div>
+    <div class="socialNetworkNav"> 
+		<a href="https://scholar.google.com/citations?user=H1WDcG4AAAAJ&amp;hl=en&#10;" target="_blank">
+      <!-- Add a Anchor tag with nested img tag here --> 
+      <img src="AboutPageAssets/images/scholar.jpg" alt="sample" width="30"></a>  </div>
+	  	  <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://twitter.com/YarivLior" target="_blank">
+      <img src="AboutPageAssets/images/twitt.png" alt="sample" width="30"></a>  </div>
+<!--
+	  <div class="socialNetworkNav">
+		 <a href="https://www.linkedin.com/in/lior-yariv-3a01a690/" target="_blank">
+			 <img src="AboutPageAssets/images/linkedin.png"  alt="sample" width="30"> </a></div>
+-->
+	  
+  </aside>
+</header>
+<!-- content -->
+<section class="mainContent"> 
+  <!-- Contact details -->
+  
+  <!-- Previous experience details -->
+  
+  <section class="section2">
+  <h2 class="sectionTitle">Publications</h2>
+    <hr class="sectionTitleRule">
+
+    <hr class="sectionTitleRule2">
+	  
+    	<!-- VolSDF  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/volsdf_2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/volsdf.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Volume Rendering of Neural Implicit Surfaces </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="https://jiataogu.me/" target="_blank">Jiatao Gu</a>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2021, <b style="color:darksalmon">Oral</b>  
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		
+		  <div class="dropdown"><span></span><a href="https://lioryariv.github.io/volsdf/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;"> Neural volume rendering became increasingly popular recently due to its success in synthesizing novel views of a scene from a sparse set of input images. So far, the geometry learned by neural volume rendering techniques was modeled using a generic density function. Furthermore, the geometry itself was extracted using an arbitrary level set of the density function leading to a noisy, often low fidelity reconstruction. The goal of this paper is to improve geometry representation and reconstruction in neural volume rendering. We achieve that by modeling the volume density as a function of the geometry. This is in contrast to previous work modeling the geometry as a function of the volume density. In more detail, we define the volume density function as Laplace’s cumulative distribution function (CDF) applied to a signed distance function (SDF) representation. This simple density representation has three benefits: (i) it provides a useful inductive bias to the geometry learned in the neural volume rendering process; (ii) it facilitates a bound on the opacity approximation error, leading to an accurate sampling of the viewing ray. Accurate sampling is important to provide a precise coupling of geometry and radiance; and (iii) it allows efficient unsupervised disentanglement of shape and appearance in volume rendering. Applying this new density representation to challenging scene multiview datasets produced high quality geometry reconstructions, outperforming relevant baselines. Furthermore, switching shape and appearance between scenes is possible due to the disentanglement of the two.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2106.12052" target="_blank">Paper</a></div>
+		  <div class="dropdown"><span></span><a href="https://github.com/lioryariv/volsdf" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IDR  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/scull2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/idr.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, Dror Moran, <a href="https://www.weizmann.ac.il/math/meirav/" target="_blank">Meirav Galun</a>,  <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.weizmann.ac.il/math/ronen/home/" target="_blank">Ronen Basri</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2020, <b style="color:darksalmon">Spotlight</b> 
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+			
+			<div class="dropdown"><span></span><a href="https://lioryariv.github.io/idr/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">In this work we address the challenging problem of multiview 3D surface reconstruction. We introduce a neural network architecture that simultaneously learns the unknown geometry, camera parameters, and a neural renderer that approximates the light reflected from the surface towards the camera. The geometry is represented as a zero level-set of a neural network, while the neural renderer, derived from the rendering equation, is capable of (implicitly) modeling a wide set of lighting conditions and materials. We trained our network on real world 2D images of objects with different material properties, lighting conditions, and noisy camera initializations from the DTU MVS dataset. We found our model to produce state of the art 3D surface reconstructions with high fidelity, resolution and detail.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2003.09852" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/lioryariv/idr" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IGR  -->
+	  	<div class="sectionContent"><br>
+	 		<img src="AboutPageAssets/images/igr.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Implicit Geometric Regularization for Learning Shapes </h2>
+      		<h3 class="sectionContentSubTitle"> Amos Gropp, <b>Lior Yariv</b>, Niv Haim, <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>International Conference on Machine Learning (ICML) 2020
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">Representing shapes as level sets of neural networks has been recently proved to be useful for different shape analysis and reconstruction tasks. So far, such representations were computed using either: (i) pre-computed implicit shape representations; or (ii) loss functions explicitly defined over the neural level sets. In this paper we offer a new paradigm for computing high fidelity implicit neural representations directly from raw data (ie, point clouds, with or without normal information). We observe that a rather simple loss function, encouraging the neural network to vanish on the input point cloud and to have a unit norm gradient, possesses an implicit geometric regularization property that favors smooth and natural zero level set surfaces, avoiding bad zero-loss solutions. We provide a theoretical analysis of this property for the linear case, and show that, in practice, our method leads to state of the art implicit neural representations with higher level-of-details and fidelity compared to previous methods.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2002.10099" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/amosgropp/IGR" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  	  <!-- Controlling  -->
+	  	<div class="sectionContent">
+	 		<img src="AboutPageAssets/images/2019_neural_levelsets.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Controlling Neural Level Sets </h2>
+      		<h3 class="sectionContentSubTitle"> <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, Niv Haim, <b>Lior Yariv</b>, Ofer Israelov, <a href="https://haggaim.github.io/" target="_blank">Haggai Maron</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2019
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">The level sets of neural networks represent fundamental properties such as decision boundaries of classifiers and are used to model non-linear manifold data such as curves and surfaces. Thus, methods for controlling the neural level sets could find many applications in machine learning. In this paper we present a simple and scalable approach to directly control level sets of a deep neural network. Our method consists of two parts: (i) sampling of the neural level sets, and (ii) relating the samples’ positions to the network parameters. The latter is achieved by a sample network that is constructed by adding a single fixed linear layer to the original network. In turn, the sample network can be used to incorporate the level set samples into a loss function of interest. We have tested our method on three different learning tasks:  raining networks robust to adversarial attacks, improving generalization to unseen data, and curve and surface reconstruction from point clouds. Notably, we increase robust accuracy to the level of standard classification accuracy in off-the-shelf networks, improving it by 2% in MNIST and 27% in CIFAR10 compared to state-of-the-art methods. For surface reconstruction, we produce high fidelity surfaces directly from raw 3D point clouds.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/1905.11911" target="_blank">Paper</a></div>
+			<div class="dropdown"><span></span><a href="https://github.com/matanatz/ControllingNeuralLevelsets" target="_blank">Code</a></div>
+	  </aside>
+    <br><br>
+	
+<!-- Replicate the above Div block to add more title and company details --> 
+	</section>
+
+	  
+  <hr>
+  
+</section>
+<footer>
+  <p class="footerDisclaimer">Made with Dreamweaver <span></span></p>
+  <p class="footerNote"></p>
+</footer>
+
+
+</body>
+<html><head>
+<!--
+	 Global site tag (gtag.js) - Google Analytics 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141762792-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141762792-1');
+</script>
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lior Yariv's Homepage</title>
+<link href="AboutPageAssets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+</style>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+</head>
+
+<body alink="#282727" vlink="#9b9b9b" link="#9b9b9b">
+<!-- Header content -->
+<header>
+  <div class="profilePhoto"> 
+    <!-- Profile photo --> 
+    <img src="AboutPageAssets/images/profile_pic.jpg" alt="sample" width="259"> </div>
+<!--	<img src="AboutPageAssets/images/fonitAigolkatan.jpg" alt="sample" width="259"> </div>-->
+  <!-- Identity details -->
+  <section class="profileHeader">
+    <h1>Lior Yariv</h1>
+    <h3>PhD Candidate</h3>
+    <hr>
+    <p>I am a PhD student in the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">
+      Prof. Yaron Lipman</a>. <br> My main research interest is in devising deep learning methods for various 3D shapes analysis and synthesis tasks.
+	<br>
+    </p>
+  </section>
+  <!-- Links to Social network accounts -->
+  <aside class="socialNetworkNavBar">
+	   <div class="socialNetworkNav"> 
+      <!-- Add a Anchor tag with nested img tag here --> 
+		   <a href="mailto:lior.yariv@weizmann.ac.il">
+      <img src="AboutPageAssets/images/mail.png" alt="sample" width="30"></a> </div>
+      <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://github.com/lioryariv" target="_blank">
+      <img src="AboutPageAssets/images/github.png" alt="sample" width="30"></a>  </div>
+    <div class="socialNetworkNav"> 
+		<a href="https://scholar.google.com/citations?user=H1WDcG4AAAAJ&amp;hl=en&#10;" target="_blank">
+      <!-- Add a Anchor tag with nested img tag here --> 
+      <img src="AboutPageAssets/images/scholar.jpg" alt="sample" width="30"></a>  </div>
+	  	  <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here --> 
+		<a href="https://twitter.com/YarivLior" target="_blank">
+      <img src="AboutPageAssets/images/twitt.png" alt="sample" width="30"></a>  </div>
+<!--
+	  <div class="socialNetworkNav">
+		 <a href="https://www.linkedin.com/in/lior-yariv-3a01a690/" target="_blank">
+			 <img src="AboutPageAssets/images/linkedin.png"  alt="sample" width="30"> </a></div>
+-->
+	  
+  </aside>
+</header>
+<!-- content -->
+<section class="mainContent"> 
+  <!-- Contact details -->
+  
+  <!-- Previous experience details -->
+  
+  <section class="section2">
+  <h2 class="sectionTitle">Publications</h2>
+    <hr class="sectionTitleRule">
+
+    <hr class="sectionTitleRule2">
+	  
+    	<!-- VolSDF  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/volsdf_2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/volsdf.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Volume Rendering of Neural Implicit Surfaces </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="https://jiataogu.me/" target="_blank">Jiatao Gu</a>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2021, <b style="color:darksalmon">Oral</b>  
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		
+		  <div class="dropdown"><span></span><a href="https://lioryariv.github.io/volsdf/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;"> Neural volume rendering became increasingly popular recently due to its success in synthesizing novel views of a scene from a sparse set of input images. So far, the geometry learned by neural volume rendering techniques was modeled using a generic density function. Furthermore, the geometry itself was extracted using an arbitrary level set of the density function leading to a noisy, often low fidelity reconstruction. The goal of this paper is to improve geometry representation and reconstruction in neural volume rendering. We achieve that by modeling the volume density as a function of the geometry. This is in contrast to previous work modeling the geometry as a function of the volume density. In more detail, we define the volume density function as Laplace’s cumulative distribution function (CDF) applied to a signed distance function (SDF) representation. This simple density representation has three benefits: (i) it provides a useful inductive bias to the geometry learned in the neural volume rendering process; (ii) it facilitates a bound on the opacity approximation error, leading to an accurate sampling of the viewing ray. Accurate sampling is important to provide a precise coupling of geometry and radiance; and (iii) it allows efficient unsupervised disentanglement of shape and appearance in volume rendering. Applying this new density representation to challenging scene multiview datasets produced high quality geometry reconstructions, outperforming relevant baselines. Furthermore, switching shape and appearance between scenes is possible due to the disentanglement of the two.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2106.12052" target="_blank">Paper</a></div>
+		  <div class="dropdown"><span></span><a href="https://github.com/lioryariv/volsdf" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IDR  -->
+	  	<div class="sectionContent">
+<!--	 		<img align="center" src="AboutPageAssets/images/scull2.gif" style="height: 100%; width: 100%; object-fit: contain"  alt="">-->
+			<video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="AboutPageAssets/images/idr.mp4" type="video/mp4"> </video>
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance </h2>
+      		<h3 class="sectionContentSubTitle"> <b>Lior Yariv</b>, <a href="http://www.wisdom.weizmann.ac.il/~/ykasten/" target="_blank">Yoni Kasten</a>, Dror Moran, <a href="https://www.weizmann.ac.il/math/meirav/" target="_blank">Meirav Galun</a>,  <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.weizmann.ac.il/math/ronen/home/" target="_blank">Ronen Basri</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2020, <b style="color:darksalmon">Spotlight</b> 
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+			
+			<div class="dropdown"><span></span><a href="https://lioryariv.github.io/idr/" target="_blank">Project Page</a></div>
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">In this work we address the challenging problem of multiview 3D surface reconstruction. We introduce a neural network architecture that simultaneously learns the unknown geometry, camera parameters, and a neural renderer that approximates the light reflected from the surface towards the camera. The geometry is represented as a zero level-set of a neural network, while the neural renderer, derived from the rendering equation, is capable of (implicitly) modeling a wide set of lighting conditions and materials. We trained our network on real world 2D images of objects with different material properties, lighting conditions, and noisy camera initializations from the DTU MVS dataset. We found our model to produce state of the art 3D surface reconstructions with high fidelity, resolution and detail.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2003.09852" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/lioryariv/idr" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  <!-- IGR  -->
+	  	<div class="sectionContent"><br>
+	 		<img src="AboutPageAssets/images/igr.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Implicit Geometric Regularization for Learning Shapes </h2>
+      		<h3 class="sectionContentSubTitle"> Amos Gropp, <b>Lior Yariv</b>, Niv Haim, <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>International Conference on Machine Learning (ICML) 2020
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">Representing shapes as level sets of neural networks has been recently proved to be useful for different shape analysis and reconstruction tasks. So far, such representations were computed using either: (i) pre-computed implicit shape representations; or (ii) loss functions explicitly defined over the neural level sets. In this paper we offer a new paradigm for computing high fidelity implicit neural representations directly from raw data (ie, point clouds, with or without normal information). We observe that a rather simple loss function, encouraging the neural network to vanish on the input point cloud and to have a unit norm gradient, possesses an implicit geometric regularization property that favors smooth and natural zero level set surfaces, avoiding bad zero-loss solutions. We provide a theoretical analysis of this property for the linear case, and show that, in practice, our method leads to state of the art implicit neural representations with higher level-of-details and fidelity compared to previous methods.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/2002.10099" target="_blank">Paper</a></div>
+		<div class="dropdown"><span></span><a href="https://github.com/amosgropp/IGR" target="_blank">Code</a></div>
+		</aside>
+	  
+	  <br><br>
+	  
+	  	  <!-- Controlling  -->
+	  	<div class="sectionContent">
+	 		<img src="AboutPageAssets/images/2019_neural_levelsets.png" style="height: 100%; width: 100%; object-fit: contain" alt="">
+	  	</div>
+	  	<section class="section2Content">
+      		<h2 class="sectionContentTitle"> Controlling Neural Level Sets </h2>
+      		<h3 class="sectionContentSubTitle"> <a href="https://matanatz.github.io/" target="_blank">Matan Atzmon</a>, Niv Haim, <b>Lior Yariv</b>, Ofer Israelov, <a href="https://haggaim.github.io/" target="_blank">Haggai Maron</a>, <a href="http://www.wisdom.weizmann.ac.il/~ylipman/" target="_blank">Yaron Lipman</a>
+	 		</h3>
+		  	<h3 class="sectionContentSubTitle"><em>Neural Information Processing Systems (NeurIPS) 2019
+	 		</em></h3>
+    	</section>
+		<aside class="externalResourcesNav"> 
+		  <div class="dropdown"> <span>Abstract</span>
+			<div class="dropdown-content">
+			  <p style="text-align:left;">The level sets of neural networks represent fundamental properties such as decision boundaries of classifiers and are used to model non-linear manifold data such as curves and surfaces. Thus, methods for controlling the neural level sets could find many applications in machine learning. In this paper we present a simple and scalable approach to directly control level sets of a deep neural network. Our method consists of two parts: (i) sampling of the neural level sets, and (ii) relating the samples’ positions to the network parameters. The latter is achieved by a sample network that is constructed by adding a single fixed linear layer to the original network. In turn, the sample network can be used to incorporate the level set samples into a loss function of interest. We have tested our method on three different learning tasks:  raining networks robust to adversarial attacks, improving generalization to unseen data, and curve and surface reconstruction from point clouds. Notably, we increase robust accuracy to the level of standard classification accuracy in off-the-shelf networks, improving it by 2% in MNIST and 27% in CIFAR10 compared to state-of-the-art methods. For surface reconstruction, we produce high fidelity surfaces directly from raw 3D point clouds.</p>
+			</div>
+		  </div>
+		  <div class="dropdown"><span></span><a href="https://arxiv.org/abs/1905.11911" target="_blank">Paper</a></div>
+			<div class="dropdown"><span></span><a href="https://github.com/matanatz/ControllingNeuralLevelsets" target="_blank">Code</a></div>
+	  </aside>
+    <br><br>
+	
+<!-- Replicate the above Div block to add more title and company details --> 
+	</section>
+
+	  
+  <hr>
+  
+</section>
+<footer>
+  <p class="footerDisclaimer">Made with Dreamweaver <span></span></p>
+  <p class="footerNote"></p>
+</footer>
+
+
+</body></html>
