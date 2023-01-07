@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A fast feature based image stitching algorithm developed in Python"/>
+    <title>Optimized Image Stitching in Python</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        background: #fdfcf9 no-repeat fixed top left;
+        font-family:'Open Sans', sans-serif;
+      }
+    </style>
+
+  </head>
+
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Optimized Image Stitching in Python</h2>
+            <!-- <h4 style="color:#6e6e6e;"> Robot Perception (ROB-GY 6203) Fall 2022  </h4> -->
+            <hr>
+            <h6> <a href="https://github.com/RohanG9929" target="_blank">Rohan Gangakhedkar</a><sup>1</sup>, 
+                 
+            <p> <sup>1</sup>New York Univeristy &nbsp;&nbsp; 
+            </p>
+            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
+
+            <div class="row justify-content-center">
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/pdf/2104.00680.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Paper</a> </p>
+              </div> -->
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="https://github.com/RohanG9929/Optimized-Image-Stitching" role="button" 
+                    target="_blank" disabled=1>
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/LoFTR-suppmat.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Supplementary</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/LoFTR_IMC21.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> IMC-Report </a> </p>
+              </div> -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <h6 style="color:#8899a5" class="text-center"> 
+              TL;DR: This image stitching algorithm utilizes feature matches between images to compute an homography matrix. 
+              Using this homography the second image is warped, and then the two images are layed on top of one another. 
+              Then, dynamic weighted fusion is used to remove the seam line caused by the pasting of the images onto one another. 
+              The result is a stitched image with little to no seam line present.
+            </h6>
+              <br>
+              <img class="img-fluid" src="images/labLeft.jpg" alt="Left Image" width="30%" height="30%">
+              <img class="img-fluid" src="images/labRight.jpg" alt="Right Image" width="30%" height="30%">
+            <div>
+              <br>
+          <p class="text-justify">
+            Above is the two original images taken side by side. And below is the stitched result. As you can see
+            there is little to no seam line present from the image and the alignment is as it should be.
+          </p>
+          <br>
+          <img class="img-fluid" src="images/stiched.jpg" alt="Right Image" width="50%" height="50%">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+  <!-- pipeline -->
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Pipeline overview</h3>
+            <hr style="margin-top:0px">
+                <img class="img-fluid" src="images/loftr-arch.png" alt="LoFTR Architechture">
+            <hr>
+            <p class="text-justify">
+              LoFTR has four components:
+              \(\textbf{1.}\) A local feature CNN extracts
+              the coarse-level feature maps 
+              $\tilde{F}^A$ and $\tilde{F}^B$,
+              together with the fine-level feature maps 
+              $\hat{F}^A$ and $\hat{F}^B$
+              from the image pair $I^A$ and $I^B$.
+              \(\textbf{2.}\)  The coarse feature maps are flattened to 1-D vectors and added with the
+              positional encoding.
+              The added features are then processed by the Local Feature TRansformer (LoFTR) module, which has $N_c$ self-attention and cross-attention layers.
+              \(\textbf{3.}\) A differentiable matching layer is used to match the transformed features, which ends up with a confidence matrix $\mathcal{P}_c$. 
+              The matches in $\mathcal{P}_c$ are selected according to the confidence threshold and mutual-nearest-neighbor criteria, 
+              yielding the coarse-level match prediction $\mathcal{M}_c$.
+              \(\textbf{4.}\) For every selected coarse prediction $(\tilde{i}, \tilde{j}) \in \mathcal{M}_c$,
+              a local window with size $w\times w$ is cropped from the fine-level feature map.
+              Coarse matches will be refined within this local window to a sub-pixel level as the final match prediction $\mathcal{M}_f$.
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br> -->
+
+  <!-- rec -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Recommendations to other works by me</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            Welcome to checkout my  (<a href="http://zju3dv.github.io/neuralrecon/">NeuralRecon</a>) and human reconstruction (<a href="http://zju3dv.github.io/neuralbody">NeuralBody</a> and <a href="http://zju3dv.github.io/Mirrored-Human">Mirrored-Human</a>) in CVPR 2021.
+          </p>
+      </div>
+    </div>
+  </div> -->
+
+  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+      <hr>
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+  </footer>
+
+  
+</body>
+</html>
