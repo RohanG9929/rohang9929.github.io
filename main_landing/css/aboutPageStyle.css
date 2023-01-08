@@ -118,6 +118,13 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 	opacity: 0.5;
 }
 /* Main Content sections */
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
 .mainContent .section1 {
 	display: inline-block;
 }
