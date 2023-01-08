@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Intelligent Line Following Robot"/>
+    <title>Intelligent Line Following Robot</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        background: #fdfcf9 no-repeat fixed top left;
+        font-family:'Open Sans', sans-serif;
+      }
+    </style>
+
+  </head>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+  MathJax = {tex: {
+      tags: 'ams'  // should be 'ams', 'none', or 'all'
+    }
+  };
+  </script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Intelligent Line Following Robot</h2>
+            <h4 style="color:#6e6e6e;"> Advanced Mechatronics (ROB-GY 6103) Spring 2022 </h4>
+            <hr>
+            <h6> <a href="https://github.com/RohanG9929" target="_blank">Rohan Gangakhedkar</a><sup>1</sup>, 
+                 
+            <p> <sup>1</sup>New York Univeristy &nbsp;&nbsp; 
+            </p>
+            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
+
+            <div class="row justify-content-center">
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/pdf/2104.00680.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Paper</a> </p>
+              </div> -->
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="https://github.com/RohanG9929/Intelligent-Line-Following-Robot" role="button" 
+                    target="_blank" disabled=1>
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/LoFTR-suppmat.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Supplementary</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/LoFTR_IMC21.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> IMC-Report </a> </p>
+              </div> -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <h6 style="color:#8899a5" class="text-center"> 
+              TL;DR: Designed line following and path planning algorithms to navigate a robot around a track. 
+            </h6>
+              <br>
+              <img class="img-fluid" src="images/follow.gif" alt="Line Following">
+              <div><b style="color:#fd5638; font-size:large" id="demo-warning"></b>
+              <br>
+          <p class="text-justify">
+            A task was set for the robot to make its way around the arena and avoiding obstacles. The using vision the robot was tasked with again making its way around the arena steering 
+          clear of obstacles while also detecting friendlies and enemies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+ <!-- pipeline -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Parts</h3>
+            <hr style="margin-top:0px">
+            <h4>Infrared</h4>
+                <p class="text-justify">
+                  Below shows the outcome of the visionless system. The Robot navigates its way around the arena using only the IR sensor array and the ultrasonic sensor at the front.
+                  In this implementation a Propeller P2X8C4M64P chip was used. The Propeller is a multicore chip and was used to control the line following algorithm, and the other peripherals such as the mini LCD, ultrasonic sensor and LED's.
+                </p>
+
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe style="clip-path: inset(1px 1px)" width="80%" height="80%" src="https://www.youtube.com/embed/A20tuHHq5s0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+              
+                <br><br>
+                <h4>Infrared + Vision</h4>
+                <p class="text-justify">
+                  Below shows the outcome system with vision. The Robot navigates its way around the arena using the IR sensor array and the ultrasonic sensor, and the camera is used to detect friendlies or enemies around the arena.
+                  In this implementation a Raspberry Pi was used alongside the Propeller P2X8C4M64P. The Propeller controlled the line following algorithm, same as the infrared only implementation, and the RPi controlled the camera and the detection of blocks along the track.
+                </p>
+
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe style="clip-path: inset(1px 1px)" width="10%" height="10%" src="https://www.youtube.com/embed/v_PczUwwVuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+
+                
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- ack -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgements</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            I would like to specially thank the Professor Ludovic Righetti for allowing me to showcase this project on my website.
+          </p>
+          <hr>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- rec -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Recommendations to other works by me</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            Welcome to checkout my  (<a href="http://zju3dv.github.io/neuralrecon/">NeuralRecon</a>) and human reconstruction (<a href="http://zju3dv.github.io/neuralbody">NeuralBody</a> and <a href="http://zju3dv.github.io/Mirrored-Human">Mirrored-Human</a>) in CVPR 2021.
+          </p>
+      </div>
+    </div>
+  </div> -->
+
+  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+      <hr>
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+  </footer>
+
+  
+</body>
+</html>
