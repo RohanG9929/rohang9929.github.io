@@ -104,6 +104,8 @@
             <hr style="margin-top:0px">
             <h4>Infrared</h4>
                 <p class="text-justify">
+                  A tracking controller (using an LQ design with linear approximations) to follow a circular trajectory under wind disturbances. 
+
                   Below shows the outcome of the visionless system. The Robot navigates its way around the arena using only the IR sensor array and the ultrasonic sensor at the front.
                   In this implementation a Propeller P2X8C4M64P chip was used. The Propeller is a multicore chip and was used to control the line following algorithm, and the other peripherals such as the mini LCD, ultrasonic sensor and LED's.
                 </p>
@@ -113,7 +115,7 @@
                 </div>
               
                 <br><br>
-                <h4>Infrared + Vision</h4>
+            <h4>Infrared + Vision</h4>
                 <p class="text-justify">
                   Below shows the outcome system with vision. The Robot navigates its way around the arena using the IR sensor array and the ultrasonic sensor, and the camera is used to detect friendlies or enemies around the arena.
                   In this implementation a Raspberry Pi was used alongside the Propeller P2X8C4M64P. The Propeller controlled the line following algorithm, same as the infrared only implementation, and the RPi controlled the camera and the detection of blocks along the track.
