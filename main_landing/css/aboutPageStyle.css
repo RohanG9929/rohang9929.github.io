@@ -41,8 +41,8 @@ body {
 	padding-right: 2.275%;
 }
 
-img {
-	border: 1px solid #555;
+.projectImg{
+	border: 0.5px solid #555;
   }
 
 a:any-link {
