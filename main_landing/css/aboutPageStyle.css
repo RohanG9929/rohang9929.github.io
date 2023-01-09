@@ -41,6 +41,10 @@ body {
 	padding-right: 2.275%;
 }
 
+img {
+	border: 1px solid #555;
+  }
+
 a:any-link {
 	color: var(--blue);
 	text-decoration-line: underline;

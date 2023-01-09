@@ -34,7 +34,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2>Inverting a Pendulum with Q-Learning</h2>
+            <h2>Inverting a Pendulum with model-free reinforcement learning (Q-Learning)</h2>
             <h4 style="color:#6e6e6e;"> Reinforcement Learning and Optimal Control for Robotics (ROB-GY 6323) Fall 2022 </h4>
             <hr>
             <h6> <a href="https://github.com/RohanG9929" target="_blank">Rohan Gangakhedkar</a><sup>1</sup>, 
@@ -79,18 +79,18 @@
           <h3>Abstract</h3>
             <hr style="margin-top:0px">
             <h6 style="color:#8899a5" class="text-center"> 
-              TL;DR: The LQR and iLQR algorithms were used to control a 2D quadrotor to perform acrobatic moves. 
-              This was split into 3 parts, where a controller was designed for each. 
+              TL;DR: The system was able to learn a policy for an inverted pendulum model to make it do a swing-up motion. 
             </h6>
               <br>
               
               <video id="demo" width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="images/flip.mp4" type="video/mp4">
+                <source src="images/Control1.mp4" type="video/mp4">
               </video>
               <div><b style="color:#fd5638; font-size:large" id="demo-warning"></b>
               <br>
           <p class="text-justify">
-            As can be seen in the video above, the quadrotor performs a full flip. This was achieved with iLQR control</p>
+            The Q-learning algorithm took 6000 episodes to learn how to invert the pendulum.
+            As can be seen in the video above, there is one back and forth swing before the pendulum can lift up and remain inverted.</p>
         </div>
       </div>
     </div>
@@ -105,87 +105,85 @@
         <div class="col-12 text-center">
             <h3>Approach</h3>
             <hr style="margin-top:0px">
-                <img class="img-fluid" width="30% "src="images/quadrotor.png" alt="Quadrotor">
+                <img class="img-fluid" width="15% "src="images/pendulum.png" alt="Pendulum">
                 <hr>
                 <p class="text-justify">
-                  The quadrotor is depicted in the image above.
+                  The Pendulum is depicted in the image above.
                   <br><br>
-                  The quadrotor dynamics are defined like so:
+
+                  In this scenario the inverted pendulum has a limit on the maximum torque it can apply, 
+                  therefore it is necessary for the pendulum to do a few "back and forth" motions to be able to 
+                  reach the inverted position (\(\theta=\pi\)) from the standing still non-inverted position (\(\theta=0\)).
                   <br>
+                  The state will be written as \(x = \begin{pmatrix} \theta \\ \omega \end{pmatrix}\) as the vector of states of the system. 
+                  And the dynamics will be time-discretized , and refer to \(x_n\) as the state at time \(t = n \Delta t\) (assuming discretization time \(\Delta t\))
+                  <br>
+                  The following discounted cost function needs to be minimized.
+                  \(\sum_{i=0}^{\infty} \alpha^i g(x_i, u_i)\) where 
                   \begin{equation}
-                  \dot{x} = v_x
+                  g(x_i, u_i) = (\theta-\pi)^2 + 0.01 \cdot \dot{\theta}_i^2 + 0.0001 \cdot u_i^2 \qquad \textrm{and} \qquad\alpha=0.99
                   \end{equation}
 
-                  \begin{equation}
-                  m\dot{v_x} = -(u_1 + u_2)sin \theta
-                  \end{equation}
-
-                  \begin{equation}
-                  \dot{y} = v_y
-                  \end{equation}
+                  This cost mostly penalizes deviations from the inverted position but also encourages small velocities and control.
                   
-                  \begin{equation}
-                  m\dot{v_y} = (u_1 + u_2)cos \theta -mg
-                  \end{equation}
-                  
-                  \begin{equation}
-                  \dot{\theta} = \omega
-                  \end{equation}
-                  
-                  \begin{equation}
-                  I\dot{\omega} = r(u_1 + u_2)
-                  \end{equation}
-
-                  Where \(x\) is the horizontal and \(y\) the vertical positions of the quadrotor and \(\theta\) is its orientation with respect to the horizontal plane. 
-                  <br>
-                  \(v_x\) and \(v_y\) are the linear velocities and \(\omega\) is the angular velocity of the robot. 
-                  <br>
-                  \(u_1\) and \(u_2\) are the forces produced by the rotors (our control inputs). 
-                  <br>
-                  \(m\) is the quadrotor mass, \(I\) its moment of inertia (a scalar), \(r\) is the distance from the center of the robot frame to the propellers and \(g\) is the gravity constant. 
-                  <br>
-                  The entire state is denoted as \(z = [x, v_x, y, v_y, \theta, \omega]^T\) - with the control written as \(u = [u_1, u_2]^T\).
-
                   <br><br>
                 </p>
 
-                <h4>Following a Circular Trajectory</h4>
+                <h4>Using a control of \(u \in \{-4,0,4\}\)</h4>
                 <p class="text-justify">
-                  A tracking controller (using an LQ design with linear approximations) to follow a circular trajectory. 
+                  Below shows the outcome of the Q-Learning process when the control is \(u \in \{-4,0,4\}\).
                   <br>
                   <center>
                     <video id="demo" width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                      <source src="images/circular.mp4" type="video/mp4">
+                      <source src="images/Control1.mp4" type="video/mp4">
                     </video>
                   </center>
+                  As can be seen in the video above, there is one back and forth swing before the pendulum can lift up and remain inverted.
+                  <br>
+                  <img class="img-fluid" width="50% "src="images/LearningProgress_1.jpg" alt="Learning">
+                  <br>
+                  Shown in the graph is the cost per episode (shown in blue), and the average cost (shown in orange). The graph
+                  shows the decrease in cost as the Q-learning is taking place. The Q-learning algorithm for this control, took 6000 episodes to 
+                  learn how to invert the pendulum.
+                  <br><br>
+                  Below are the value functions and policy for this control scheme.
+                  <br><br>
+                  <img class="img-fluid" width="30% "src="images/Value_1.jpg" alt="Value Function">
+                  <img class="img-fluid" width="30% "src="images/Policy_2.jpg" alt="Policy">
+                  <br>
+                  The policy is the optimal action to take at each state. The value function is the associated value at each state when performing the optimal action. 
+           
                 </p>
 
 
 
-                <h4>Reaching a Vertical Orientation</h4>
+                <h4>Using a control of \(u \in \{-5,0,5\}\)</h4>
                 <p class="text-justify">
                   Controller that ensures the robot reachs a vertical orientation, \(\theta = \frac{\pi}{2} \) at the location \(x = 3 , y = 3\) at time \(t = 5\) starting from the origin. 
                   During the remainder of the motion, the robot trys to stay close to the origin. 
                   <br>
                   <center>
                     <video id="demo" width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                      <source src="images/vertical.mp4" type="video/mp4">
+                      <source src="images/Control2.mp4" type="video/mp4">
                     </video>
                   </center>
-                </p>
+                  The extra effort that the controller can apply allows for a quicker learning in the Q-table. 
+                  This can be seen with the lower final cost (around ~ 200) in the learning progress.
+                  And because of this the policy is able to invert the pendulum quicker than the \(u \in \{-5,0,5\}\) case. 
+                  With no back and forth necessary for the pendulum, only one swing before inverting.
 
-                <h4>Performing a Full Flip</h4>
-                <p class="text-justify">
-                  A controller that makes the robot do a full flip, trying to reach the upside-down state 
-                  \(\theta = \pi \) at the location \(x = 1.5 , y = 3\) at time \(t = 5\) and 
-                  \(\theta = 2\pi \) at the location \(x = 3 , y = 0\) at time \(t = 10\), 
-                  starting from the origin. 
                   <br>
-                  <center>
-                    <video id="demo" width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                      <source src="images/flip.mp4" type="video/mp4">
-                    </video>
-                  </center>
+                  <img class="img-fluid" width="50% "src="images/LearningProgress_2.jpg" alt="Learning">
+                  <br>
+                  The Q-learning algorithm for this control, again took 6000 episodes to 
+                  learn how to invert the pendulum. This time learning slightly more.
+                  <br><br>
+                  Below are the value functions and policy for this control scheme.
+                  <br><br>
+                  <img class="img-fluid" width="30% "src="images/Value_2.jpg" alt="Value Function">
+                  <img class="img-fluid" width="30% "src="images/Policy_2.jpg" alt="Policy">
+                  <br>
+           
                 </p>
               
                 <br><br>
