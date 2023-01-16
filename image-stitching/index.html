@@ -95,37 +95,61 @@
 
 
   <!-- pipeline -->
-  <!-- <section>
+  <section>
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
             <h3>Pipeline overview</h3>
             <hr style="margin-top:0px">
-                <img class="img-fluid" src="images/loftr-arch.png" alt="LoFTR Architechture">
-            <hr>
+                <!-- <img class="img-fluid" src="images/loftr-arch.png" alt="LoFTR Architechture"> -->
+            <!-- <hr> -->
             <p class="text-justify">
-              LoFTR has four components:
-              \(\textbf{1.}\) A local feature CNN extracts
-              the coarse-level feature maps 
-              $\tilde{F}^A$ and $\tilde{F}^B$,
-              together with the fine-level feature maps 
-              $\hat{F}^A$ and $\hat{F}^B$
-              from the image pair $I^A$ and $I^B$.
-              \(\textbf{2.}\)  The coarse feature maps are flattened to 1-D vectors and added with the
-              positional encoding.
-              The added features are then processed by the Local Feature TRansformer (LoFTR) module, which has $N_c$ self-attention and cross-attention layers.
-              \(\textbf{3.}\) A differentiable matching layer is used to match the transformed features, which ends up with a confidence matrix $\mathcal{P}_c$. 
-              The matches in $\mathcal{P}_c$ are selected according to the confidence threshold and mutual-nearest-neighbor criteria, 
-              yielding the coarse-level match prediction $\mathcal{M}_c$.
-              \(\textbf{4.}\) For every selected coarse prediction $(\tilde{i}, \tilde{j}) \in \mathcal{M}_c$,
-              a local window with size $w\times w$ is cropped from the fine-level feature map.
-              Coarse matches will be refined within this local window to a sub-pixel level as the final match prediction $\mathcal{M}_f$.
+              The pipeline of the image stitching consists of  main parts.
+
+              The first is converting the images to grayscale so that SIFT can extract matches.
+              <br>
+            </p>
+              <img  class="img-fluid" src="images/left-bw.png" alt="Left (Grayscale)" width="30%"> 
+              &nbsp;
+              <img class="img-fluid" src="images/right-bw.png" alt="Right (Grayscale)" width="30%">
+            <p class="text-justify">
+              <br><br>
+              After extracting matches OpenCV's FlannBasedMatcher is used and then Lowe's ratio test is performed
+              to ensure good matches. These matches are displayed in the iamge below<br>
+            </p>
+              <img class="img-fluid" src="images/matches.png" width="50%" alt="Matches">
+            <p class="text-justify">
+                <br><br>
+                Based on the extracted matches an homography is retrieved and this is applied to the right image to
+                warp it in line with the left image.<br>
+            </p>
+              <img class="img-fluid" src="images/homo.png" width="50%" alt="Homography">
+            <p class="text-justify">
+                <br><br>
+                The left image is then added to the warped right image. This will create a very sharp
+                vertical seam line at the right hand edge of the left image. Although in this scenario the 
+                seam line is very minimal, it is very evident in the areas pointed out by the arrows.<br>
+            </p>
+              <img class="img-fluid" src="images/addition.jpeg" width="50%" alt="Image Addition">
+            <p class="text-justify">
+                <br><br>
+                After applying the weighted fusion on the image the seam line in removed and the result is a 
+                blending of the left image and right image.<br>
+            </p>
+              <img class="img-fluid" src="images/seam.png" width="50%" alt="Seam Correction">
+            <p class="text-justify">
+                <br><br>
+                The final step is to fix the corners as a result of the image warped. Applying a simple warp of the image 
+                and moving the corners to the edges fixes this and gives the final image.<br>
+            </p>
+              <img class="img-fluid" src="images/output.png" width="50%" alt="Output">
+              <br><br>
             </p>
         </div>
       </div>
     </div>
   </section>
-  <br> -->
+  <br>
 
   <!-- rec -->
   <!-- <div class="container">
