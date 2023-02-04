@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A fast feature based image stitching algorithm developed in Python"/>
+    <title>Dexterous Manipulator</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        background: #fdfcf9 no-repeat fixed top left;
+        font-family:'Open Sans', sans-serif;
+      }
+    </style>
+
+  </head>
+
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Design and Development of a Dexterous Manipulator</h2>
+            <!-- <h4 style="color:#6e6e6e;"> Robot Perception (ROB-GY 6203) Fall 2022  </h4> -->
+            <hr>
+            <h6> <a href="https://rohang9929.github.io" target="_blank">Rohan Gangakhedkar</a><sup>1</sup>, 
+                 
+            <p> <sup>1</sup>New York Univeristy &nbsp;&nbsp; 
+            </p>
+            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
+
+            <div class="row justify-content-center">
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/pdf/2104.00680.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Paper</a> </p>
+              </div> -->
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="https://github.com/RohanG9929/Optimized-Image-Stitching" role="button" 
+                    target="_blank" disabled=1>
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div> -->
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/LoFTR-suppmat.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Supplementary</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/LoFTR_IMC21.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> IMC-Report </a> </p>
+              </div> -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <h6 style="color:#8899a5" class="text-center"> 
+              TL;DR: The device create demonstrates the adaptive behavior of compliant, under-actuated grippers and 
+              their superior grasping capabilities under uncertainties. The device is very light-weight 
+              and was fabricated using rapid prototyping equipment and hybrid manufacturing techniques.
+            </h6>
+              <br>
+              <iframe width="672" height="378" src="https://www.youtube.com/embed/8YgNTh4wjoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8YgNTh4wjoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
+            <div>
+            <br>
+          <p class="text-center">
+            Above is a video demonstrating the capability of the final gripper design.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+
+  <!-- pipeline -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Pipeline overview</h3>
+            <hr style="margin-top:0px">
+                <!-- <img class="img-fluid" src="images/loftr-arch.png" alt="LoFTR Architechture"> -->
+            <!-- <hr> -->
+            <p class="text-justify">
+              The pipeline of the development of the gripper consisted of four main parts.
+              <br>
+            </p>
+            <h4 align="left" >Gripper Design</h4>
+              <img  class="img-fluid" src="images/full_gripper.png" alt="Full Gripper Design in Solidworks" width="30%"> 
+              <br>
+              <p class="text-justify">
+              The first was the gripper design. It was decided that the gripper would have 3 joints per finger, 
+              each finger consisting of 3 gripper sections. These sections pivot around joints and are used to grip the objects.
+
+              The tip of the finger is slightly smaller than the other joints and the fingernail is small but sticks out enough for gripping of <small> </small> objects.
+              The fully built design consists of two grippers, a base and room for the motor and the tendons to be routed. The molding compound will be poured into the mold areas atop each finger, allowing the gripper to grip objects with compliance.
+              </p>
+              
+              <br>
+
+            <h4 align="left" >Motor Selection and Tendon Routing</h4>
+            <p class="text-justify">
+              The next step was motor selection and tendon routing. The motor selection was simple process
+              An XM430 motor was selected for this project. The XM was chosen due to the design of the motor enclosure and its minimal mass. 
+              The enclosure comes with holes pre-threaded on the sides of the motor.
+              This means the motor can be easily attached to the main base of the gripper, 
+              simply by screwing through the base and the motor. This not only adds simplicity 
+              to the design, but ensures the design remains lightweight from the small motor mass 
+              and that extra mounting material and housings are not needed.
+
+            </p>
+            <img class="img-fluid" src="images/motor.png" width="30%" alt="Motor">
+            <p class="text-justify"><br>
+             
+              <br>
+              
+              The tendon chosen was a rope tendon. A Nylon tendon would also work; however, this would stretch when the motor applied larger torques. 
+              The rope provided strength and maneuverability. For the tendons to attach to the motors a pulley system was designed. This pully attaches to the motor, 
+              and the tendons are routed onto it through the holes on the edges of the pulley.
+              <br>
+            </p>
+            <img class="img-fluid" src="images/pulley1.png" width="30%" alt="Pulley1">
+            <img class="img-fluid" src="images/pulley2.png" width="30%" alt="Pulley2">
+
+            <p class="text-justify"><br>
+             
+              Above are the two pulley designs that were used in the design. The initial design is on the left.
+              
+              The initial design (shown on the left) was constantly breaking under larger loads and was not able to 
+              transmit force very well. So, a new design needed to be developed. 
+
+              To combat the design flaws, another pulley was designed (shown on the right). This time the pulley has a 
+              smaller diameter for the tendon to wrap around but a filleted edge was added to the design. This strengthened
+              the pulley tremendously. 
+
+              The smaller holes shown on the new design are to fix the pulley to the motor, and the larger hole is to
+              tie the tendon through.
+            </p>
+              
+
+              <br>
+            <h4 align="left" >Passive Extension</h4>
+            <p class="text-justify">
+              Each gripper needs to have a mechanism for passive extension. The tendons and motor provide
+              active extension;however, a method of passive extension must be present. The passive
+              extension aids with gripping of the objects, prevents out of plane motion of the finger and 
+              reduces the number of actuators needed in the system. 
+              
+              <br><br>
+              Many grippers use springs between sections as the passive extension. However, in aiming for lightweight design this option is often not the best.
+              For this design I chose to use elastic bands between the gripper sections. This is a versatile and robust solution as more bands can be added for a 
+              stiffer passive extension or bands can be removed for a more elastic passive extension. All while remaining lightweight.<br>
+            </p>
+              <img class="img-fluid" src="images/passive_ext.png" width="30%" alt="Passive Extension">
+
+              <br> <br> 
+            <h4 align="left" >Gripper Pads</h4>
+            <p class="text-justify">
+                
+                Following the printing of the parts, Vitaflex-20 was poured into the mould areas of the gripper. 
+                The Vitaflex ensures that the gripper has a soft section 
+                of material used for gripping the objects (this can be seen as the red section in the image). 
+                Making the design semi-compliant.
+                <br>
+                A Hybrid Deposition Manufacturing (HDM) approach was taken to the design. 
+                This meant that when the molding was done, extra section of the gripper could be removed
+                and tossed aside.
+                <br>
+            </p>
+            <img class="img-fluid" src="images/build.png" width="30%" alt="First Built Design">
+            <br> <br> 
+            <h4 align="left" >Experimental Findings</h4>
+            <p class="text-justify">
+               
+                One of the problems the gripper had is that the fingers were too large. 
+                This meant that when gripping large objects such as the 1.5L bottle, 
+                the fingers could not wrap around very well. The large finger size also meant that 
+                force transmission was hindered by a large degree and pinch grips (with the fingertips) 
+                were almost impossible.
+                
+                <br><br> 
+
+                Therefore, the middle section of the fingers was removed. Leaving a two-joint gripper design. 
+                This greatly improved force transmission and geometric grasping capabilities. 
+                This updated gripper can be seen in image below
+            </p>
+            <img class="img-fluid" src="images/update.png" width="30%" alt="Updated Design">
+
+                 
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+    <!-- ack -->
+    <div class="container">
+      <div class="row ">
+        <div class="col-12">
+            <h3>Acknowledgements</h3>
+            <hr style="margin-top:0px">
+            <p class="text-justify">
+              I would like to specially my professor Minas Liarokapis for Biomechatronics 2020, without whom this project could not have been completed.
+  
+              I would like to also thank Yale University, their works and previous designs in dexterous grippers were of great use.
+            </p>
+            <hr>
+        </div>
+      </div>
+    </div>
+
+  <!-- rec -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Recommendations to other works by me</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            Welcome to checkout my  (<a href="http://zju3dv.github.io/neuralrecon/">NeuralRecon</a>) and human reconstruction (<a href="http://zju3dv.github.io/neuralbody">NeuralBody</a> and <a href="http://zju3dv.github.io/Mirrored-Human">Mirrored-Human</a>) in CVPR 2021.
+          </p>
+      </div>
+    </div>
+  </div> -->
+
+  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+      <hr>
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+  </footer>
+
+  
+</body>
+</html>
