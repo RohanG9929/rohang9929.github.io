@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An iterative Linear Quadratic Regulator for controlling a quadrotor"/>
+    <title>Augmented Reality</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        background: #fdfcf9 no-repeat fixed top left;
+        font-family:'Open Sans', sans-serif;
+      }
+    </style>
+
+  </head>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+  MathJax = {tex: {
+      tags: 'ams'  // should be 'ams', 'none', or 'all'
+    }
+  };
+  </script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Augmenting a 3D cube onto a 2D Image/Video</h2>
+            <h4 style="color:#6e6e6e;">  Robot Perception (ROB-GY 6203) Fall 2022 </h4>
+            <hr>
+            <h6> <a href="https://rohang9929.github.io" target="_blank">Rohan Gangakhedkar</a><sup>1</sup>, 
+                 
+            <p> <sup>1</sup>New York Univeristy &nbsp;&nbsp; 
+            </p>
+            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
+
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="https://github.com/RohanG9929/Augmented-Reality-in-Python" role="button" 
+                    target="_blank" disabled=1>
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <h6 style="color:#8899a5" class="text-center"> 
+              TL;DR: After calibrating the camera with an Aruco Tag grid and obtaining the Camera Intrinsics, the Pose of the camera in relation to the Aruco tag can be estimated.
+              With the pose, a 3D cube can be projected onto the 2D image plane.
+            </h6>
+              <br>
+              
+              <img class="img-fluid" width="30% "src="images/augment.gif" alt="Augmented Reality">
+              <div><b style="color:#fd5638; font-size:large" id="demo-warning"></b>
+              <br>
+          <p class="text-justify">
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+ <!-- pipeline -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Approach</h3>
+            <hr style="margin-top:0px">
+
+            <br>
+            <h4>Camera Calibration</h4>
+            <p class="text-justify">
+              Before the cube could be augmented onto the 2D image plane the Camera Intrinsics needed
+              to be obtained.  
+            </p>
+
+            <br>
+            <h4>Obtaining Live Camera Pose</h4>
+            <p class="text-justify">
+              While the video is running, the pose of the camera relative to the image plane needs to be computed.
+              This can be done using the Intrinsics obtained before.  
+            </p>
+             
+            <br>
+            <h4>Projecting Points</h4>
+            <p class="text-justify">
+              With the known pose of the camera the corner points of the aruco tag in frame can be projected into 3D.
+              <br>
+              The object points (corner points) are   
+            </p>
+
+
+            <br>
+            <h4>Drawing Cube</h4>
+            <p class="text-justify">
+              Finally, using the projected points we now have the 2D coordinates of the 3D cube projected onto the image
+              plane. Now simply using OpenCV's line command lines are drawn between the points creating a cube.  
+            </p>
+              
+                <br><br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- ack -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgements</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            I would like to specially thank the Professor Ludovic Righetti for allowing me to showcase this project on my website.
+          </p>
+          <hr>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- rec -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Recommendations to other works by me</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            Welcome to checkout my  (<a href="http://zju3dv.github.io/neuralrecon/">NeuralRecon</a>) and human reconstruction (<a href="http://zju3dv.github.io/neuralbody">NeuralBody</a> and <a href="http://zju3dv.github.io/Mirrored-Human">Mirrored-Human</a>) in CVPR 2021.
+          </p>
+      </div>
+    </div>
+  </div> -->
+
+  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+      <hr>
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+  </footer>
+
+  
+</body>
+</html>
