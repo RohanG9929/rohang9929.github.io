@@ -38,6 +38,7 @@
 	box-sizing: border-box;
   }
 
+
 body {
 	margin-left: auto;
 	margin-right: auto;
@@ -45,12 +46,13 @@ body {
 	max-width: 1280px;
 	padding-left: 2.275%;
 	padding-right: 2.275%;
-	background-image: linear-gradient(to top, rgba(71, 60, 60, 0.58), rgba(219, 146, 97, 0.58)), url('bg.png');
+	background-image:  linear-gradient(to top, rgba(71, 60, 60, 0.58), rgba(219, 146, 97, 0.58)), url('bg.png');
 	background-position: 0% 0%, center;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
     background-color: #FFFFFF;
 	background-attachment: fixed;
+	backdrop-filter: blur(8px);
 }
 
 li{
