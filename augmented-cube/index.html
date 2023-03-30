@@ -97,14 +97,17 @@
             <h4>Camera Calibration</h4>
             <p class="text-justify">
               Before the cube could be augmented onto the 2D image plane the Camera Intrinsics needed
-              to be obtained.  
+              to be obtained. These were obtained by taking multiple photos of an aruco board, from multiple angles.
+              Then leveraging OpenCV's calibration tools the Camera matrix (K) and the distortion coefficients of the camera were obtained.
             </p>
 
             <br>
             <h4>Obtaining Live Camera Pose</h4>
             <p class="text-justify">
               While the video is running, the pose of the camera relative to the image plane needs to be computed.
-              This can be done using the Intrinsics obtained before.  
+              This can be done using the Intrinsics obtained before. Again leveraging OpenCV's tools, the 4 corners of the 
+              aruco tag are used to define a plane in 3D space and this plane combined with the camera matrix are used to obtained
+              the 3D rotation and translation of the camera from the plane AKA it's pose.
             </p>
              
             <br>
@@ -112,7 +115,8 @@
             <p class="text-justify">
               With the known pose of the camera the corner points of the aruco tag in frame can be projected into 3D.
               <br>
-              The object points (corner points) are   
+              Similar to how the pose was obtained above, the reverse process happens and the pose is used with the object points (corner points) 
+              to define 4 new object points (the other 4 corners of the cube).   
             </p>
 
 
