@@ -53,6 +53,8 @@ body {
     background-color: #FFFFFF;
 	background-attachment: fixed;
 	backdrop-filter: blur(8px);
+	transition: opacity 1.25s ease 0s, transform 1.25s ease 0s;
+
 }
 
 li{
