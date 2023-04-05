@@ -52,7 +52,9 @@ viewMoreButton.addEventListener('click', () => {
   setTimeout(function() {
 	fadeIn(secondSection,1000);
   }, 1000);
-  
+
+  var top = document.querySelector('.mainContent')
+  top.scrollIntoView();  
 });
 
 backButton.addEventListener('click', () => {
@@ -63,5 +65,8 @@ backButton.addEventListener('click', () => {
   setTimeout(function() {
 	fadeIn(firstSection,1000);
   }, 1000);
+
+  var top = document.querySelector('.mainContent')
+  top.scrollIntoView();
 });
 
