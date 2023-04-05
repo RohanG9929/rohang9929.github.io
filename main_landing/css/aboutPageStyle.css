@@ -53,8 +53,13 @@ body {
     background-color: #FFFFFF;
 	background-attachment: fixed;
 	backdrop-filter: blur(8px);
-	transition: opacity 1.25s ease 0s, transform 1.25s ease 0s;
+	opacity: 0;
+	transition: opacity 0.85s ease-in-out, transform 0.25s ease 0s;
 
+}
+
+.fade-in-active {
+	opacity: 1;
 }
 
 li{
@@ -510,22 +515,22 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 }
 
 
-#buttons08 {
+#viewMore {
     justify-content: center;
     gap: 0.375rem;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-#buttons08:not(:first-child) {
+#viewMore:not(:first-child) {
     margin-top: 1rem !important;
 }
 
-#buttons08:not(:last-child) {
+#viewMore:not(:last-child) {
     margin-bottom: 3rem !important;
 }
 
-#buttons08 li a {
+#viewMore li a {
     display: inline-block;
     width: 8.375rem;
     height: 2.5rem;
@@ -545,12 +550,12 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
     transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
-#buttons08 .button {
+#viewMore .button {
     color: #FFFFFF;
     border: solid 1px #FFFFFF;
 }
 
-#buttons08 .button:hover {
+#viewMore .button:hover {
     border-color: #FFCCB0 !important;
     color: #FFCCB0 !important;
 }
