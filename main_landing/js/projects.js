@@ -24,14 +24,24 @@ xmlhttp.onreadystatechange = function() {
   }
 
   // create HTML elements
-  const projectContainer = document.querySelector(".section2");
-  for (var i = 0; i < projectData.length; i++) {
+  const mainContainer = document.querySelector(".mainContent");
+  var section2_one = document.createElement("section");
+  section2_one.className = "section2";
+  section2_one.setAttribute('id', 'firstPage');
+  mainContainer.appendChild(section2_one);
+
+  var section2_two = document.createElement("section");
+  section2_two.className = "section2";
+  section2_two.setAttribute('id', 'secondPage');
+  mainContainer.appendChild(section2_two);
+
+  const projectContainerPageOne = document.querySelector(".section2#firstPage");
+  const projectContainerPageTwo = document.querySelector(".section2#secondPage");
+
+
+  var firstPageLength = (projectData.length>7) ? 7 : projectData.length;
+  for (var i = 0; i < firstPageLength; i++) {
     var project = projectData[i];
-
-  //   var section = document.createElement("section");
-    // var title = document.createElement("h2");
-    // var link = document.createElement("a");
-
 
     var sectionContenDiv = document.createElement("div");
     sectionContenDiv.className = "sectionContent";
@@ -99,12 +109,12 @@ xmlhttp.onreadystatechange = function() {
     aside.appendChild(div3);
 
     
-    projectContainer.appendChild(sectionContenDiv);
-    projectContainer.appendChild(section2Content);
-    projectContainer.appendChild(aside);
-    projectContainer.appendChild(rowBreak);
-    projectContainer.appendChild(rowBreak2);
-    projectContainer.appendChild(rowBreak3);
+    projectContainerPageOne.appendChild(sectionContenDiv);
+    projectContainerPageOne.appendChild(section2Content);
+    projectContainerPageOne.appendChild(aside);
+    projectContainerPageOne.appendChild(rowBreak);
+    projectContainerPageOne.appendChild(rowBreak2);
+    projectContainerPageOne.appendChild(rowBreak3);
   }
   }
 };
