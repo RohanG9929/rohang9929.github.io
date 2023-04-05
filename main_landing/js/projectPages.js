@@ -46,12 +46,12 @@ function fadeIn(element, duration) {
 
 viewMoreButton.addEventListener('click', () => {
   // Fade out the firstPage
-  fadeOut(firstSection,1000);
+  fadeOut(firstSection,800);
   
   // Fade in the new section and back button
   setTimeout(function() {
-	fadeIn(secondSection,1000);
-  }, 1000);
+	fadeIn(secondSection,800);
+  }, 800);
 
   var top = document.querySelector('.mainContent')
   top.scrollIntoView({ behavior: 'smooth', block: 'start' });  
@@ -59,12 +59,12 @@ viewMoreButton.addEventListener('click', () => {
 
 backButton.addEventListener('click', () => {
   // Fade out the body
-  fadeOut(secondSection,1000);
+  fadeOut(secondSection,800);
   
   // Fade in the new section and back button
   setTimeout(function() {
-	fadeIn(firstSection,1000);
-  }, 1000);
+	fadeIn(firstSection,800);
+  }, 800);
 
   var top = document.querySelector('.mainContent')
   top.scrollIntoView({ behavior: 'smooth', block: 'start' });
