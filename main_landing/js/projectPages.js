@@ -54,7 +54,7 @@ viewMoreButton.addEventListener('click', () => {
   }, 1000);
 
   var top = document.querySelector('.mainContent')
-  top.scrollIntoView();  
+  top.scrollIntoView({ behavior: 'smooth', block: 'start' });  
 });
 
 backButton.addEventListener('click', () => {
@@ -67,6 +67,6 @@ backButton.addEventListener('click', () => {
   }, 1000);
 
   var top = document.querySelector('.mainContent')
-  top.scrollIntoView();
+  top.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
