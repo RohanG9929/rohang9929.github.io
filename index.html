@@ -389,6 +389,48 @@ window.onload = function() {
 	fadeInElement.classList.add("fade-in-active");
 }
 
+function fadeOut(element, duration) {
+	var opacity = 1;
+	var interval = 50;
+	var time = duration / interval;
+  
+	var fadeOutTimer = setInterval(function() {
+	  if (opacity > 0) {
+		opacity -= 1 / time;
+		element.style.opacity = opacity;
+	  } else {
+		clearInterval(fadeOutTimer);
+		element.style.display = "none";
+	  }
+	}, interval);
+  }
+
+function fadeIn(element, duration) {
+  element.style.opacity = 0;
+  element.style.display = "block";
+  var startTime = performance.now();
+  (function animate() {
+    var elapsedTime = performance.now() - startTime;
+    if (elapsedTime >= duration) {
+      element.style.opacity = 1;
+    } else {
+      var opacity = elapsedTime / duration;
+      element.style.opacity = opacity;
+      requestAnimationFrame(animate);
+    }
+  })();
+}
+var body = document.querySelector("body");
+// fadeIn(body, 1000);
+
+// var myElement = document.getElementById("resume");
+var myElement = document.querySelector(".resume");
+// fadeOut(myElement, 1000); // fades out over 1 second (1000 milliseconds)
+
+// setTimeout(function() {
+// 	fadeIn(myElement, 1000);
+// }, 10000);
+
 </script> 
 
 <!-- <section id="one-section" class="active" style=""><ul id="buttons03" class="buttons"><li><a href="#home" class="button n01">BACK</a></li></ul><div id="image02" class="image"><a href="https://public.tableau.com/app/profile/jessica4478/viz/MakingLearningVisibleWhatFactorsPositivelyAffectLearning/Dashboard1#1" class="frame deferred" style="background-image: none; background-size: 100% 100%; background-position: left top; background-repeat: no-repeat;"><img src="assets/images/image02.jpg?v=e839e74e" data-src="done" alt="" style="opacity: 1;"></a></div><div id="image18" class="image"><a href="https://app.datacamp.com/workspace/w/f5fe82e9-e073-4957-abdb-e3d58d7dcb3b" class="frame deferred" style="background-image: none; background-size: 100% 100%; background-position: left top; background-repeat: no-repeat;"><img src="assets/images/image18.jpg?v=e839e74e" data-src="done" alt="" style="opacity: 1;"></a></div><div id="image22" class="image"><a href="https://github.com/jessicabohannon/When-Was-the-Golden-Age-of-Video-Games" class="frame deferred" style="background-image: none; background-size: 100% 100%; background-position: left top; background-repeat: no-repeat;"><img src="assets/images/image22.jpg?v=e839e74e" data-src="done" alt="" style="opacity: 1;"></a></div><div id="image17" class="image"><a href="https://public.tableau.com/app/profile/jessica4478/viz/WorldHappinessReportDashboard_16753084631430/WorldHappinessReportDashboard#1" class="frame deferred" style="background-image: none; background-size: 100% 100%; background-position: left top; background-repeat: no-repeat;"><img src="assets/images/image17.jpg?v=e839e74e" data-src="done" alt="" style="opacity: 1;"></a></div><hr id="divider01"></section>

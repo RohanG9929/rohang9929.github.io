@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An iterative Linear Quadratic Regulator for controlling a quadrotor"/>
+    <title>Vision based Pose and Velocity Estimation of Microaerial Vehicle</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        background: #fdfcf9 no-repeat fixed top left;
+        font-family:'Open Sans', sans-serif;
+      }
+    </style>
+
+  </head>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+  MathJax = {tex: {
+      tags: 'ams'  // should be 'ams', 'none', or 'all'
+    }
+  };
+  </script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Vision based Pose and Velocity Estimation of Microaerial Vehicle</h2>
+            <h4 style="color:#6e6e6e;"> Robot Localization and Navigation (ROB-GY 6213) Spring 2022 </h4>
+            <hr>
+            <h6> <a href="https://rohang9929.github.io" target="_blank">Rohan Gangakhedkar</a><sup>1</sup>, 
+                 
+            <p> <sup>1</sup>New York Univeristy &nbsp;&nbsp; 
+            </p>
+            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
+
+            <div class="row justify-content-center">
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/pdf/2104.00680.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Paper</a> </p>
+              </div> -->
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="" role="button" 
+                    target="_blank" disabled=1>
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+              <!-- <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/LoFTR-suppmat.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Supplementary</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="files/LoFTR_IMC21.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> IMC-Report </a> </p>
+              </div> -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <h6 style="color:#8899a5" class="text-center"> 
+              TL;DR: Given planar distribution of April Tags and corresponding images captured from the drone, 
+              the planar homography matrix was formulated and the homography matrix is decomposed into rotation 
+              and translation vector respecting the orthonormality constraints. To estimate the velocity of the 
+              drone as it moves between different frames, feature points are extracted from the frames and 
+              using KLT object tracker, we can estimate the velocity of the features as they move in different frames. 
+              The velocity of the drone can be estimated based on motion model given the velocity of the features and 
+              then RANSAC for outlier rejection is then applied.
+            </h6>
+              <br>
+              
+              <video id="demo" width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="images/flip.mp4" type="video/mp4">
+              </video>
+              <div><b style="color:#fd5638; font-size:large" id="demo-warning"></b>
+              <br>
+          <p class="text-justify">
+            As can be seen in the video above, the quadrotor performs a full flip. This was achieved with iLQR control</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+ <!-- pipeline -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Approach</h3>
+            <hr style="margin-top:0px">
+                <img class="img-fluid" width="30% "src="images/quadrotor.png" alt="Quadrotor">
+                <hr>
+                <p class="text-justify">
+                  The quadrotor is depicted in the image above.
+                  <br><br>
+                  The quadrotor dynamics are defined like so:
+                  <br>
+                  \begin{equation}
+                  \dot{x} = v_x
+                  \end{equation}
+
+                  \begin{equation}
+                  m\dot{v_x} = -(u_1 + u_2)sin \theta
+                  \end{equation}
+
+                  \begin{equation}
+                  \dot{y} = v_y
+                  \end{equation}
+                  
+                  \begin{equation}
+                  m\dot{v_y} = (u_1 + u_2)cos \theta -mg
+                  \end{equation}
+                  
+                  \begin{equation}
+                  \dot{\theta} = \omega
+                  \end{equation}
+                  
+                  \begin{equation}
+                  I\dot{\omega} = r(u_1 + u_2)
+                  \end{equation}
+
+                  Where \(x\) is the horizontal and \(y\) the vertical positions of the quadrotor and \(\theta\) is its orientation with respect to the horizontal plane. 
+                  <br>
+                  \(v_x\) and \(v_y\) are the linear velocities and \(\omega\) is the angular velocity of the robot. 
+                  <br>
+                  \(u_1\) and \(u_2\) are the forces produced by the rotors (our control inputs). 
+                  <br>
+                  \(m\) is the quadrotor mass, \(I\) its moment of inertia (a scalar), \(r\) is the distance from the center of the robot frame to the propellers and \(g\) is the gravity constant. 
+                  <br>
+                  The entire state is denoted as \(z = [x, v_x, y, v_y, \theta, \omega]^T\) - with the control written as \(u = [u_1, u_2]^T\).
+
+                  <br><br>
+                </p>
+
+                <h4>Following a Circular Trajectory</h4>
+                <p class="text-justify">
+                  A tracking controller (using an LQ design with linear approximations) to follow a circular trajectory. 
+                  <br>
+                  <center>
+                    <video id="demo" width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                      <source src="images/circular.mp4" type="video/mp4">
+                    </video>
+                  </center>
+                </p>
+
+
+
+                <h4>Reaching a Vertical Orientation</h4>
+                <p class="text-justify">
+                  Controller that ensures the robot reachs a vertical orientation, \(\theta = \frac{\pi}{2} \) at the location \(x = 3 , y = 3\) at time \(t = 5\) starting from the origin. 
+                  During the remainder of the motion, the robot trys to stay close to the origin. 
+                  <br>
+                  <center>
+                    <video id="demo" width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                      <source src="images/vertical.mp4" type="video/mp4">
+                    </video>
+                  </center>
+                </p>
+
+                <h4>Performing a Full Flip</h4>
+                <p class="text-justify">
+                  A controller that makes the robot do a full flip, trying to reach the upside-down state 
+                  \(\theta = \pi \) at the location \(x = 1.5 , y = 3\) at time \(t = 5\) and 
+                  \(\theta = 2\pi \) at the location \(x = 3 , y = 0\) at time \(t = 10\), 
+                  starting from the origin. 
+                  <br>
+                  <center>
+                    <video id="demo" width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                      <source src="images/flip.mp4" type="video/mp4">
+                    </video>
+                  </center>
+                </p>
+              
+                <br><br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- ack -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgements</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            I would like to specially thank the Professor Ludovic Righetti for allowing me to showcase this project on my website.
+          </p>
+          <hr>
+      </div>
+    </div>
+  </div>
+
+  <!-- rec -->
+  <!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Recommendations to other works by me</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+            Welcome to checkout my  (<a href="http://zju3dv.github.io/neuralrecon/">NeuralRecon</a>) and human reconstruction (<a href="http://zju3dv.github.io/neuralbody">NeuralBody</a> and <a href="http://zju3dv.github.io/Mirrored-Human">Mirrored-Human</a>) in CVPR 2021.
+          </p>
+      </div>
+    </div>
+  </div> -->
+
+  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+      <hr>
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+  </footer>
+
+  
+</body>
+</html>
