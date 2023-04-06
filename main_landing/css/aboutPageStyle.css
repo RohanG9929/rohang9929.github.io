@@ -46,7 +46,7 @@ body {
 	max-width: 1280px;
 	padding-left: 2.275%;
 	padding-right: 2.275%;
-	background-image:  linear-gradient(to top, rgba(71, 60, 60, 0.58), rgba(219, 146, 97, 0.58)), url('bg.png');
+	background-image:  linear-gradient(to top, rgba(71, 60, 60, 0.58), var(--info)), url('bg2.jpg');
 	background-position: 0% 0%, center;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
@@ -54,7 +54,7 @@ body {
 	background-attachment: fixed;
 	backdrop-filter: blur(8px);
 	opacity: 0;
-	transition: opacity 0.85s ease-in-out, transform 0.25s ease 0s;
+	transition: opacity 0.55s ease-in-out, transform 0.25s ease 0s;
 
 }
 
@@ -245,11 +245,11 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 }
 
 .icons.style1 a:hover {
-    border-color: #FFCCB0 !important;
+    border-color: var(--info) !important;
 }
 
 .icons.style1 a:hover svg {
-    fill: #FFCCB0 !important;
+    fill: var(--info) !important;
 }
 
 .icons.style1 li a + svg {

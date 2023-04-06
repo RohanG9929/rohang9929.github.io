@@ -1,13 +1,23 @@
 const mainBody = document.querySelector("body");
-const viewMoreButton = document.getElementById('viewMore');
-const backButton = document.getElementById('backButton');
-const firstSection = document.getElementById("firstPage");
-const secondSection = document.getElementById("secondPage");
+let firstSection;
+let secondSection;
+
+//Checking to see if the second page of projects is loaded in
+function page2Loaded() {
+	 secondSection = document.getElementById("secondPage");
+		if (secondSection) {
+			secondSection = document.getElementById("secondPage");
+			firstSection = document.getElementById("firstPage");
+			secondSection.style.display = "none";
+		} else {
+			setTimeout(page2Loaded, 100);
+		}
+}
 
 window.onload = function() {
 	
 	mainBody.classList.add("fade-in-active");
-	secondSection.style.display = "none";
+	page2Loaded();
 }
 
 
@@ -43,30 +53,42 @@ function fadeIn(element, duration) {
   })();
 }
 
+function waitUntilButtonsAvailable() {
+  const viewMoreButton = document.getElementById('viewMore');
+  const backButton = document.getElementById('backButton');
 
-viewMoreButton.addEventListener('click', () => {
-  // Fade out the firstPage
-  fadeOut(firstSection,800);
-  
-  // Fade in the new section and back button
-  setTimeout(function() {
-	fadeIn(secondSection,800);
-  }, 800);
+  if (viewMoreButton && backButton) {
 
-  var top = document.querySelector('.mainContent')
-  top.scrollIntoView({ behavior: 'smooth', block: 'start' });  
-});
+    viewMoreButton.addEventListener('click', () => {
+		// Fade out the firstPage
+		fadeOut(firstSection,800);
+		
+		// Fade in the new section and back button
+		setTimeout(function() {
+			fadeIn(secondSection,800);
+		}, 800);
 
-backButton.addEventListener('click', () => {
-  // Fade out the body
-  fadeOut(secondSection,800);
-  
-  // Fade in the new section and back button
-  setTimeout(function() {
-	fadeIn(firstSection,800);
-  }, 800);
+		var top = document.querySelector('.mainContent')
+		top.scrollIntoView({ behavior: 'smooth', block: 'start' });  
+	});
 
-  var top = document.querySelector('.mainContent')
-  top.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
+	backButton.addEventListener('click', () => {
+		// Fade out the body
+		fadeOut(secondSection,800);
+		
+		// Fade in the new section and back button
+		setTimeout(function() {
+			fadeIn(firstSection,800);
+		}, 800);
 
+		var top = document.querySelector('.mainContent')
+		top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	});
+
+  } else {
+    setTimeout(waitUntilButtonsAvailable, 100);
+  }
+
+}
+
+waitUntilButtonsAvailable();
